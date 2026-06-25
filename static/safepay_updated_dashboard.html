@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafePay AI | Fraud Prevention Dashboard</title>
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+  <header class="app-nav">
+    <div class="nav-inner">
+      <div>
+        <div class="brand">Safe<span>Pay</span> AI</div>
+        <div class="muted" style="font-size:0.78rem;margin-top:0.15rem">
+          <span id="conn-dot" class="conn-dot offline"></span>
+          <span id="conn-label">Connecting…</span>
+        </div>
+      </div>
+      <nav class="nav-tabs">
+        <button type="button" class="nav-tab active" data-panel="home">Home</button>
+        <button type="button" class="nav-tab" data-panel="scan">Scan</button>
+        <button type="button" class="nav-tab" data-panel="history">History</button>
+        <button type="button" class="nav-tab" data-panel="help">Safety Hub</button>
+        <button type="button" class="nav-tab" data-panel="auth">Sign in</button>
+      </nav>
+      <div class="gap-2" style="align-items:center">
+        <span id="auth-pill" class="pill pill-auth">Sign in required</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-main">
+    <!-- HOME -->
+    <section id="panel-home" class="panel active">
+      <span class="badge">Live backend</span>
+      <h1 class="hero-title">Stop UPI, QR &amp; SMS fraud before you pay.</h1>
+      <p class="muted mb-2" style="max-width:640px">
+        Connected to your SafePay FastAPI backend. Register, scan payment risks, and review history — all from this dashboard.
+      </p>
+      <div class="gap-2 mb-2">
+        <button type="button" class="btn btn-primary nav-tab" data-panel="scan">Start scanning</button>
+        <button type="button" class="btn btn-ghost nav-tab" data-panel="auth">Create account</button>
+      </div>
+      <p id="user-chip" class="user-chip mb-2">Not signed in</p>
+
+      <div class="card mb-2" style="border-color: rgba(0, 168, 150, 0.4); background: rgba(0, 168, 150, 0.05);">
+        <h3 style="margin:0 0 1rem;font-size:1rem;color:var(--accent);">Dashboard Quick Actions</h3>
+        <div class="gap-2">
+          <button type="button" class="btn btn-primary" onclick="document.querySelector('.nav-tab[data-panel=\'scan\']').click()">Analyze QR</button>
+          <button type="button" class="btn btn-ghost" onclick="document.querySelector('.nav-tab[data-panel=\'scan\']').click()">Analyze SMS</button>
+          <button type="button" class="btn btn-ghost" onclick="document.querySelector('.nav-tab[data-panel=\'help\']').click(); document.querySelector('.help-tab[data-target=\'help-report\']').click()">Report Fraud</button>
+          <a href="tel:1930" class="btn btn-ghost" style="color:var(--danger);border-color:var(--danger);">Call 1930</a>
+          <a href="https://cybercrime.gov.in" target="_blank" rel="noopener" class="btn btn-ghost">Cyber Crime Portal</a>
+          <button type="button" class="btn btn-ghost" onclick="document.querySelector('.nav-tab[data-panel=\'help\']').click(); document.querySelector('.help-tab[data-target=\'help-install\']').click()">Installation Guide</button>
+        </div>
+      </div>
+
+      <div class="grid-2 mt-2">
+        <div class="card">
+          <div class="mb-2" style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="margin:0;font-size:1rem">System health</h3>
+            <span id="backend-status-pill" class="pill pill-medium">Checking</span>
+          </div>
+          <div class="grid-2">
+            <div>
+              <div class="stat-label">Database</div>
+              <div id="db-status" class="stat-value" style="font-size:1.1rem">—</div>
+            </div>
+            <div>
+              <div class="stat-label">ML models</div>
+              <div id="model-status" class="stat-value" style="font-size:0.95rem">—</div>
+            </div>
+          </div>
+          <div class="mt-2">
+            <div style="display:flex;justify-content:space-between" class="stat-label mb-1">
+              <span>Uptime</span>
+              <span id="uptime-label">—</span>
+            </div>
+            <div style="height:8px;background:var(--border);border-radius:99px;overflow:hidden">
+              <div id="uptime-bar" style="height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width 0.4s"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 1rem;font-size:1rem">Activity summary</h3>
+          <div class="grid-2">
+            <div><div id="metric-qr-count" class="stat-value">0</div><div class="stat-label">QR scans</div></div>
+            <div><div id="metric-upi-count" class="stat-value">0</div><div class="stat-label">UPI checks</div></div>
+            <div><div id="metric-sms-count" class="stat-value">0</div><div class="stat-label">SMS scans</div></div>
+            <div><div id="metric-threat-score" class="stat-value">0%</div><div class="stat-label">High-risk rate</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-2">
+        <label class="form-label" for="api-url">Backend URL (optional override)</label>
+        <div class="gap-2">
+          <input id="api-url" type="url" class="form-control" placeholder="http://127.0.0.1:8000" style="flex:1;min-width:200px">
+          <button type="button" id="btn-save-api" class="btn btn-ghost">Save</button>
+        </div>
+        <p class="muted" style="font-size:0.78rem;margin:0.5rem 0 0">Default: same host as this page. Use <code>?api=http://127.0.0.1:8000</code> when opening from Live Server.</p>
+      </div>
+    </section>
+
+    <!-- SCAN -->
+    <section id="panel-scan" class="panel">
+      <span class="badge">Action center</span>
+      <h2 class="hero-title" style="font-size:1.6rem">Fraud scanning</h2>
+      <p class="muted mb-2">Requires sign-in. Results are saved to your account history on the backend.</p>
+
+      <div class="grid-3 mb-2">
+        <div class="card">
+          <h3 style="margin:0 0 0.5rem;font-size:1rem">QR image</h3>
+          <p class="muted mb-2" style="font-size:0.85rem">Upload PNG/JPG with a UPI QR code.</p>
+          <input id="qr-file" type="file" class="form-control mb-2" accept="image/png,image/jpeg,image/jpg">
+          <button type="button" id="btn-qr-scan" class="btn btn-primary" style="width:100%">Scan QR image</button>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 0.5rem;font-size:1rem">UPI verification</h3>
+          <p class="muted mb-2" style="font-size:0.85rem">Check UPI ID and amount before paying.</p>
+          <label class="form-label" for="upi-id">UPI ID</label>
+          <input id="upi-id" class="form-control mb-2" placeholder="name@oksbi">
+          <label class="form-label" for="upi-amount">Amount (₹)</label>
+          <input id="upi-amount" type="number" class="form-control mb-2" placeholder="500" min="1">
+          <button type="button" id="btn-upi-verify" class="btn btn-primary" style="width:100%">Verify UPI</button>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 0.5rem;font-size:1rem">SMS / link</h3>
+          <p class="muted mb-2" style="font-size:0.85rem">Paste suspicious SMS or payment links.</p>
+          <label class="form-label" for="sms-sender">Sender (optional)</label>
+          <input id="sms-sender" class="form-control mb-2" placeholder="AD-BANK">
+          <label class="form-label" for="sms-message">Message</label>
+          <textarea id="sms-message" rows="3" class="form-control mb-2" placeholder="Your account is blocked. Verify KYC…"></textarea>
+          <button type="button" id="btn-sms-scan" class="btn btn-primary" style="width:100%">Analyze message</button>
+        </div>
+      </div>
+
+      <div id="last-result"></div>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="panel-history" class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem" class="mb-2">
+        <div>
+          <span class="badge">Activity</span>
+          <h2 class="hero-title" style="font-size:1.6rem;margin-bottom:0">Scan history</h2>
+        </div>
+        <button type="button" id="btn-refresh" class="btn btn-ghost">Refresh</button>
+      </div>
+      <div class="card mb-2">
+        <div id="log-output" class="terminal">
+          <div class="log-line info">[Init] Waiting for backend connection…</div>
+        </div>
+      </div>
+      <div class="card table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Input</th>
+              <th>Status</th>
+              <th>Risk</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="history-body">
+            <tr><td colspan="5" class="muted" style="text-align:center;padding:1.5rem">No activity yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- HELP CENTER -->
+    <section id="panel-help" class="panel">
+      <span class="badge" style="border-color:var(--warning);color:var(--warning);background:rgba(234, 88, 12, 0.1)">Safety Hub</span>
+      <h2 class="hero-title" style="font-size:1.6rem">Cyber Safety & Assistance Center</h2>
+      <p class="muted mb-2">Learn how SafePay AI works, report fraud, and stay aware of common cyber threats.</p>
+
+      <div class="help-layout">
+        <!-- Sidebar Navigation -->
+        <div class="help-sidebar">
+          <button type="button" class="help-tab active" data-target="help-emergency">Emergency Helpline</button>
+          <button type="button" class="help-tab" data-target="help-how">How SafePay Works</button>
+          <button type="button" class="help-tab" data-target="help-install">Installation Guide</button>
+          <button type="button" class="help-tab" data-target="help-continuous">Continuous Protection</button>
+          <button type="button" class="help-tab" data-target="help-victim">Victim Guide</button>
+          <button type="button" class="help-tab" data-target="help-report">Report Cyber Crime</button>
+          <button type="button" class="help-tab" data-target="help-awareness">Cyber Awareness Hub</button>
+          <button type="button" class="help-tab" data-target="help-education">Fraud Detection Education</button>
+          <button type="button" class="help-tab" data-target="help-docs">Help & Documentation</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="help-content">
+          <!-- 1. Emergency Helpline -->
+          <div id="help-emergency" class="help-section active">
+            <h3 class="mb-2">Emergency Cyber Helpline</h3>
+            <div class="grid-2">
+              <div class="card" style="border-color:var(--danger);background:rgba(220, 38, 38, 0.05);">
+                <div class="stat-label mb-1" style="color:var(--danger)">National Cyber Crime Helpline</div>
+                <div class="stat-value mb-2">1930</div>
+                <p class="muted" style="font-size:0.85rem;margin-bottom:1rem">Call immediately if you've been a victim of financial cyber fraud.</p>
+                <a href="tel:1930" class="btn btn-primary" style="background:var(--danger);width:100%">Call 1930 Now</a>
+              </div>
+              <div class="card">
+                <div class="stat-label mb-1">Cyber Crime Reporting Portal</div>
+                <div class="stat-value mb-2" style="font-size:1.4rem">cybercrime.gov.in</div>
+                <p class="muted" style="font-size:0.85rem;margin-bottom:1rem">Official Govt of India portal for reporting all cyber crimes.</p>
+                <a href="https://cybercrime.gov.in" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%">Open Portal</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. How SafePay Works -->
+          <div id="help-how" class="help-section">
+            <h3 class="mb-2">How SafePay AI Works</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot">1</div>
+                <div class="timeline-content">
+                  <h4>User Input</h4>
+                  <p class="muted">You scan a QR code, paste a UPI ID, or receive a suspicious SMS link.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">2</div>
+                <div class="timeline-content">
+                  <h4>Data Extraction</h4>
+                  <p class="muted">SafePay securely parses the payment details, URLs, or sender info locally.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">3</div>
+                <div class="timeline-content">
+                  <h4>AI Analysis</h4>
+                  <p class="muted">Data is sent to our FastAPI backend for deep machine learning analysis.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">4</div>
+                <div class="timeline-content">
+                  <h4>Fraud Detection Models</h4>
+                  <p class="muted">Models check patterns, known scam databases, and behavioral anomalies.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">5</div>
+                <div class="timeline-content">
+                  <h4>Risk Score Generation</h4>
+                  <p class="muted">A normalized risk score (0-100%) and confidence metric are generated.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot">6</div>
+                <div class="timeline-content">
+                  <h4>Safety Recommendation & Alert</h4>
+                  <p class="muted">Instant alert is presented with specific reasons: "Safe to Pay" or "High Risk Scam".</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Installation Guide -->
+          <div id="help-install" class="help-section">
+            <h3 class="mb-2">How to Install SafePay AI Chrome Extension</h3>
+            <div class="timeline">
+              <div class="timeline-item"><div class="timeline-dot">1</div><div class="timeline-content"><h4>Download</h4><p class="muted">Download the SafePay AI extension package.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">2</div><div class="timeline-content"><h4>Extract</h4><p class="muted">Extract the downloaded ZIP folder to a known location.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">3</div><div class="timeline-content"><h4>Open Chrome</h4><p class="muted">Launch Google Chrome.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">4</div><div class="timeline-content"><h4>Navigate to Extensions</h4><p class="muted">Type <code>chrome://extensions</code> in the address bar.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">5</div><div class="timeline-content"><h4>Enable Developer Mode</h4><p class="muted">Toggle "Developer mode" in the top right corner.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">6</div><div class="timeline-content"><h4>Load Unpacked</h4><p class="muted">Click the "Load unpacked" button.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">7</div><div class="timeline-content"><h4>Select Folder</h4><p class="muted">Select the extracted SafePay AI extension folder.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">8</div><div class="timeline-content"><h4>Pin Extension</h4><p class="muted">Click the puzzle piece icon and pin SafePay AI to your toolbar.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">9</div><div class="timeline-content"><h4>Verify</h4><p class="muted">Open any website and click the icon to verify it's active.</p></div></div>
+            </div>
+            <div class="card mt-2">
+              <h4>Troubleshooting</h4>
+              <p class="muted" style="font-size:0.85rem;margin-top:0.5rem">If the extension icon doesn't appear, ensure you selected the correct folder containing the <code>manifest.json</code> file during Step 7. Check the Chrome extensions page for any error messages.</p>
+            </div>
+          </div>
+
+          <!-- 4. Continuous Protection -->
+          <div id="help-continuous" class="help-section">
+            <h3 class="mb-2">How Continuous Protection Works</h3>
+            <p class="muted mb-2">The Chrome Extension works silently in the background.</p>
+            <div class="continuous-diagram mb-2">
+              <div class="diag-node">Browser Tab</div>
+              <div class="diag-arrow">→</div>
+              <div class="diag-node">SafePay Extension<br><small>(QR/UPI/SMS Detection)</small></div>
+              <div class="diag-arrow">→</div>
+              <div class="diag-node">AI Fraud Analysis<br><small>(Backend)</small></div>
+              <div class="diag-arrow">→</div>
+              <div class="diag-node">Instant Overlay<br><small>(Risk Alert)</small></div>
+            </div>
+            <ul class="muted" style="font-size:0.9rem;padding-left:1.5rem">
+              <li><strong>Browser tab monitoring:</strong> Checks active page content securely without saving private data.</li>
+              <li><strong>QR & UPI extraction:</strong> Automatically finds payment links on Whatsapp Web, banking pages, etc.</li>
+              <li><strong>Instant notifications:</strong> Overlays a warning on the page if a threat is detected before you scan.</li>
+            </ul>
+          </div>
+
+          <!-- 5. Victim Guide -->
+          <div id="help-victim" class="help-section">
+            <h3 class="mb-2">What To Do If You Become a Victim</h3>
+            <div class="timeline">
+              <div class="timeline-item"><div class="timeline-dot" style="background:var(--danger);color:#fff;">1</div><div class="timeline-content"><h4>Call 1930</h4><p class="muted">Immediately call the National Cyber Crime Helpline.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">2</div><div class="timeline-content"><h4>Freeze Account</h4><p class="muted">Contact your bank and freeze the affected account/card.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">3</div><div class="timeline-content"><h4>Gather Evidence</h4><p class="muted">Save screenshots of transactions, SMS, chats, and URLs.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">4</div><div class="timeline-content"><h4>Report Online</h4><p class="muted">File a formal complaint on cybercrime.gov.in.</p></div></div>
+              <div class="timeline-item"><div class="timeline-dot">5</div><div class="timeline-content"><h4>File FIR</h4><p class="muted">If needed, visit the nearest Cyber Police Station with your complaint details.</p></div></div>
+            </div>
+          </div>
+
+          <!-- 6. Report Cyber Crime -->
+          <div id="help-report" class="help-section">
+            <h3 class="mb-2">Report Cyber Crime</h3>
+            <div class="card mb-2">
+              <h4>Reporting Checklist</h4>
+              <ul class="muted mt-2" style="font-size:0.9rem;padding-left:1.5rem">
+                <li>Bank account number and statements.</li>
+                <li>Transaction ID / UTR number of the fraudulent transaction.</li>
+                <li>Screenshots of WhatsApp/Telegram chats or SMS messages.</li>
+                <li>Suspect's UPI ID or phone number.</li>
+              </ul>
+            </div>
+            <a href="https://cybercrime.gov.in/Webform/Crime_Report_Instructions.aspx" target="_blank" rel="noopener" class="btn btn-primary mb-2">Start Complaint Filing</a>
+            <div class="accordion">
+              <div class="accordion-item">
+                <button class="accordion-header">Can I get my money back?</button>
+                <div class="accordion-content"><p>If reported within the golden hour (first 2-4 hours) via 1930, the chances of freezing the funds in the scammer's account and recovering your money are significantly higher.</p></div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header">Do I have to pay to file a report?</button>
+                <div class="accordion-content"><p>No, filing a cybercrime report on the official government portal or calling 1930 is completely free.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Awareness Hub -->
+          <div id="help-awareness" class="help-section">
+            <h3 class="mb-2">Cyber Awareness Hub</h3>
+            <div class="grid-2">
+              <div class="card"><h4>UPI Scams</h4><p class="muted" style="font-size:0.8rem">Scammers send "Collect Requests". Entering your PIN deducts money instead of receiving it.</p></div>
+              <div class="card"><h4>QR Scams</h4><p class="muted" style="font-size:0.8rem">Fake QR codes pasted over real ones at shops, or sent via WhatsApp to "receive money".</p></div>
+              <div class="card"><h4>OTP Scams</h4><p class="muted" style="font-size:0.8rem">Tricking users into sharing OTPs under the guise of KYC updates or package deliveries.</p></div>
+              <div class="card"><h4>Fake KYC</h4><p class="muted" style="font-size:0.8rem">SMS claiming your bank account/SIM will be blocked unless you click a link to update KYC.</p></div>
+              <div class="card"><h4>Customer Care</h4><p class="muted" style="font-size:0.8rem">Fake toll-free numbers on Google search leading to scammers who ask for screen sharing apps.</p></div>
+              <div class="card"><h4>Investment Scams</h4><p class="muted" style="font-size:0.8rem">Telegram groups promising 200% returns in 24 hours for small crypto or UPI deposits.</p></div>
+              <div class="card"><h4>Job Scams</h4><p class="muted" style="font-size:0.8rem">Offers for "Work from home YouTube liking jobs" that eventually ask for an upfront "security deposit".</p></div>
+              <div class="card"><h4>Social Engineering</h4><p class="muted" style="font-size:0.8rem">Impersonating relatives or bosses in urgent need of money via WhatsApp.</p></div>
+            </div>
+          </div>
+
+          <!-- 8. Education -->
+          <div id="help-education" class="help-section">
+            <h3 class="mb-2">Fraud Detection Education</h3>
+            <div class="card mb-2">
+              <h4>Risk Score Explanation</h4>
+              <div class="mt-2" style="display:flex;gap:1rem;flex-wrap:wrap">
+                <div style="flex:1"><span class="pill pill-safe mb-1">Low Risk (0-30%)</span><p class="muted" style="font-size:0.8rem">Verified merchant, normal behavior.</p></div>
+                <div style="flex:1"><span class="pill pill-medium mb-1">Medium (31-74%)</span><p class="muted" style="font-size:0.8rem">New UPI ID or unusual text patterns. Verify before paying.</p></div>
+                <div style="flex:1"><span class="pill pill-high mb-1">High Risk (75-100%)</span><p class="muted" style="font-size:0.8rem">Known scammer, malicious links, or urgent manipulative language.</p></div>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion-item"><button class="accordion-header">How SafePay evaluates QR codes</button><div class="accordion-content"><p>We extract the underlying URI (e.g., upi://pay) from the image and check the VPA, payee name, and parameters against fraud databases.</p></div></div>
+              <div class="accordion-item"><button class="accordion-header">How SMS fraud detection works</button><div class="accordion-content"><p>Natural Language Processing models analyze urgency, intent, URL reputation, and keyword combinations to flag phishing.</p></div></div>
+              <div class="accordion-item"><button class="accordion-header">Common red flags</button><div class="accordion-content"><ul class="muted" style="padding-left:1.5rem"><li>Sense of extreme urgency (e.g., "Account Blocked in 2 hours").</li><li>Asking to scan QR to *receive* money.</li><li>Grammatical errors and misspelled bank names.</li><li>Unsolicited links from unknown numbers.</li></ul></div></div>
+            </div>
+          </div>
+
+          <!-- 9. Docs -->
+          <div id="help-docs" class="help-section">
+            <h3 class="mb-2">Help & Documentation</h3>
+            <div class="accordion">
+              <div class="accordion-item"><button class="accordion-header">Getting Started Guide</button><div class="accordion-content"><p>Install the extension, sign up on this dashboard, and pin the extension to stay protected.</p></div></div>
+              <div class="accordion-item"><button class="accordion-header">Extension Permissions Explanation</button><div class="accordion-content"><p>The extension requires "activeTab" to scan current page content for payment links. It does not record browsing history.</p></div></div>
+              <div class="accordion-item"><button class="accordion-header">Privacy and Security</button><div class="accordion-content"><p>Your scans are securely encrypted. We do not store personal banking passwords or OTPs.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTH -->
+    <section id="panel-auth" class="panel">
+      <span class="badge">Authentication</span>
+      <h2 class="hero-title" style="font-size:1.6rem">Account access</h2>
+      <p class="muted mb-2">Uses <code>POST /auth/login</code> and <code>POST /auth/register</code> on your backend. Token stored in browser localStorage.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin:0 0 1rem">Sign in</h3>
+          <label class="form-label" for="login-phone">Phone</label>
+          <input id="login-phone" class="form-control mb-2" placeholder="9876543210" autocomplete="tel">
+          <label class="form-label" for="login-password">Password</label>
+          <input id="login-password" type="password" class="form-control mb-2" autocomplete="current-password">
+          <div class="gap-2">
+            <button type="button" id="btn-login" class="btn btn-primary" style="flex:1">Login</button>
+            <button type="button" id="btn-logout" class="btn btn-ghost" style="flex:1">Logout</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 1rem">Register</h3>
+          <label class="form-label" for="register-name">Name</label>
+          <input id="register-name" class="form-control mb-2" placeholder="Your name">
+          <label class="form-label" for="register-email">Email</label>
+          <input id="register-email" type="email" class="form-control mb-2" placeholder="you@email.com">
+          <label class="form-label" for="register-phone">Phone</label>
+          <input id="register-phone" class="form-control mb-2" placeholder="9876543210">
+          <label class="form-label" for="register-password">Password</label>
+          <input id="register-password" type="password" class="form-control mb-2" autocomplete="new-password">
+          <button type="button" id="btn-register" class="btn btn-primary" style="width:100%">Create account</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="muted" style="text-align:center;padding:2rem 0 0;font-size:0.8rem">
+      SafePay AI · Fraud detection for UPI, QR &amp; SMS ·
+      <a href="/docs">OpenAPI</a> ·
+      <a href="/dashboard">Dashboard</a>
+    </footer>
+  </main>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

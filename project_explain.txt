@@ -1,0 +1,289 @@
+1. PROJECT OVERVIEW
+- Project name: SafePay AI
+- Main purpose: Provide an AI-assisted fraud detection backend for QR/UPI scams, SMS scam messages, and URL phishing, with user authentication and real-time alerting.
+- Real-world problem solved: Detect fraudulent payment requests, scam messages, and suspicious URLs to protect users from financial and social-engineering attacks.
+- Core features:
+  - JWT-based authentication and registration
+  - UPI/QR fraud scanning and analysis
+  - SMS/text scam detection
+  - WebSocket threat alert broadcasting
+  - Health monitoring and system diagnostics
+  - SQL database with user history and risk registries
+  - Hybrid ML and rule-based fraud scoring
+  - QR image processing and decoding
+  - Dashboard/static frontend serving
+
+2. TECH STACK
+List all technologies used:
+- Frontend
+  - Static HTML/CSS/JS dashboard in `static/`
+  - Chrome extension with HTML/CSS/JS in `chrome-extension/`
+- Backend
+  - Python 3
+  - FastAPI
+  - Uvicorn
+  - Starlette
+- Database
+  - SQLite by default (`safepay.db` via SQLAlchemy)
+  - SQLAlchemy ORM
+- Machine Learning / AI models
+  - scikit-learn RandomForestClassifier
+  - scikit-learn LogisticRegression + TF-IDF pipeline
+  - Custom model wrappers in `app/ml/inference`
+- APIs / external services
+  - JWT auth with `python-jose`
+  - Redis caching support in `app/utils/cache.py` (redis client likely planned)
+  - `httpx` used by URL analysis when expanding shorteners
+- Deployment tools
+  - Uvicorn for app server
+  - Dockerfile present
+  - `requirements.txt` with dev and runtime dependencies
+- Authentication system
+  - JWT bearer tokens via `python-jose`
+  - Password hashing with `bcrypt`
+  - Auth middleware in `app/api/middleware/auth_middleware.py`
+  - FastAPI dependency `get_current_user`
+
+3. FOLDER STRUCTURE
+Explain every major folder and file:
+- `run.py`
+  - Application launcher, startup diagnostics, database and ML health checks, production/dev mode.
+  - Imports config, logger, SQLAlchemy engine, ML health functions.
+- `app/`
+  - `main.py`: FastAPI app creation, middleware, route registration, static file mount, health handlers.
+  - `config.py`: Pydantic settings, environment config, secrets, database and ML paths, thresholds.
+  - `dependencies.py`: FastAPI dependency injection, JWT decode, current user extraction, DB session provider.
+  - `database/`
+    - `db.py`: SQLAlchemy engine/session creation, DB health, retry, connection stats, schema init.
+    - `models.py`: ORM models for users, scan history, SMS history, QR history, message corpus, registries, communication logs.
+    - `schemas.py`: Pydantic response/request schemas for auth, scans, history, health.
+    - `seeding.py`: CSV seed logic for merchant registry, URL registry, communication logs, message corpus.
+    - `datasets/`: CSV sources used for seeding and ML dataset generation.
+  - `api/`
+    - `middleware/`
+      - `auth_middleware.py`: JWT bearer enforcement for protected routes and public route exceptions.
+      - `logging_middleware.py`: structured request/response logging, request IDs, performance warnings.
+    - `routes/`
+      - `auth_routes.py`: register/login/profile/refresh/logout.
+      - `fraud_routes.py`: QR scan, text scan, bulk scan, history, report UPI.
+      - `qr_routes.py`: QR image upload decode, parse UPI, analyze QR content.
+      - `sms_routes.py`: SMS scan, bulk scan, SMS history, report scam SMS.
+      - `health_routes.py`: health endpoints for app, DB, ML, system metrics.
+      - `ws_routes.py`: WebSocket connection for alerts.
+  - `services/`
+    - `fraud_detection_service.py`: central detection service wrapping pipeline and formatting.
+    - `ws_manager.py`: WebSocket connection management and broadcast.
+    - `qr_service.py`: QR image decode service (could be used in extension or future apps).
+    - `fraud_patterns/`
+      - pattern and heuristic analysis code for messages, URLs, sender mismatch, NLP signals, QR content.
+    - `engine/`
+      - `pipeline.py`: Main orchestrator combining feature extraction, domain/UPI/sender/social analysis, ML inference, risk scoring, explainable decision.
+      - `feature_extractor.py`: extracts URLs/emails/phones/UPI from text.
+      - `domain_analysis.py`: suspicious domain/TLD analysis.
+      - `upi_analysis.py`: suspicious UPI handle analysis.
+      - `sender_verification.py`: sender mismatch analysis.
+      - `social_engineering.py`: urgency/fear/reward content analysis.
+      - `risk_scoring.py`: score aggregation and normalization.
+      - `explainable_ai.py`: risk level mapping.
+  - `ml/`
+    - `inference/`
+      - `upi_predictor.py`: load UPI model, hybrid predictor, lazy loading.
+      - `text_predictor.py`: load text model, cleanup, explain logic, hybrid score.
+      - `url_predictor.py`: load URL model.
+    - `training/`
+      - `dataset_loader.py`: dataset aggregation for text/UPI/URL training.
+      - `model1_upi_fraud_classifier.py`: UPI model training, synthetic dataset, feature extraction.
+      - `model2_text_classifier.py`: text classifier training and TF-IDF pipeline.
+      - `model3_url_fraud_analyzer.py`: URL model training.
+    - `models/`: serialized model files expected in runtime.
+- `chrome-extension/`
+  - `manifest.json`: extension metadata and permissions.
+  - `popup.html`, `popup.js`, `popup.css`: extension UI.
+  - `background.js`: background operation logic.
+  - `content.js`, `api.js`: page and API integration.
+  - `jsQR.min.js`: QR scanning library.
+- `static/`
+  - `safepay_updated_dashboard.html`: static dashboard.
+  - `css/dashboard.css`, `js/dashboard.js`, `js/api.js`: dashboard assets.
+- `logs/`: logging output directories.
+- `scripts/`: endpoint / integration test scripts.
+- `requirements.txt`: project dependencies.
+- `Dockerfile`: containerization support.
+
+4. EXECUTION FLOW
+Explain complete end-to-end flow:
+App start
+→ User action
+→ Frontend
+→ API call
+→ Backend processing
+→ Database
+→ ML models
+→ Response
+→ UI output
+
+Detailed step-by-step flowchart:
+1. Start App:
+   - `run.py` executes.
+   - Loads `app.config.settings`, `app.utils.logger`.
+   - Checks database connectivity via `app.database.db.engine`.
+   - Checks ML health by calling `app.ml.inference.upi_predictor.model_health` and `app.ml.inference.text_predictor.model_health`.
+   - Launches Uvicorn with `app.main:app`.
+2. App initialization in `app.main`:
+   - Create FastAPI app with CORS, GZip, custom middleware.
+   - Mount `/static` directory.
+   - Register auth, fraud, qr, sms, health, ws routers.
+   - On startup lifespan: create DB tables via SQLAlchemy metadata and seed registry tables if empty.
+   - Log ML health and startup.
+3. User action / Frontend request:
+   - User opens dashboard at `/dashboard` or Chrome extension interacts with endpoints.
+   - Dashboard or extension sends HTTP requests to `/auth/login`, `/fraud/scan-text`, `/fraud/scan-qr`, `/sms/scan`, etc.
+4. API call interception:
+   - `LoggingMiddleware` logs request details, sets request ID, times execution.
+   - `AuthMiddleware` checks exclusions. For protected routes, it reads `Authorization: Bearer <token>` and validates JWT.
+   - If valid, request.state.user is populated.
+5. Backend route processing:
+   - Route-specific request model validation occurs via Pydantic.
+   - Dependencies inject `db` session and `current_user` if needed.
+   - `auth_routes` uses `get_db()` for login/register and `get_current_user()` for protected endpoints.
+   - `fraud_routes` and `sms_routes` call `app.services.fraud_detection_service` functions.
+   - `qr_routes` decodes uploaded image via OpenCV/PIL/pyzbar, then calls `detect_qr_fraud` and saves QR history.
+6. ML and fraud engine processing:
+   - `fraud_detection_service.detect_qr_fraud` / `detect_text_fraud` call `execute_fraud_pipeline`.
+   - `pipeline.py` extracts text features, analyzes domains, UPI IDs, sender mismatches, social engineering cues.
+   - It queries ML inference wrappers: `predict_upi_fraud`, `predict_text_scam`.
+   - `predict_upi_fraud` loads model `app/ml/models/model1_upi.pkl`, extracts UPI features, predicts probability, applies rule scoring.
+   - `predict_text_scam` loads text model `app/ml/models/model2_text.pkl`, cleans text, extracts text features and computes hybrid score.
+   - URL analysis may call `app.ml.inference.url_predictor`.
+   - `RiskScoringEngine` aggregates all signal scores and normalizes to 0–100.
+   - `ExplainableDecisionEngine` maps final score to `SAFE`, `LOW`, `MEDIUM`, `HIGH`, `CRITICAL`.
+7. Database read/write:
+   - User data stored in `users` table.
+   - Scan results written to `scan_history`, `sms_scan_history`, `qr_scan_history`.
+   - Reports update `upi_merchant_registry` or log to `communication_intercept_logs`.
+   - `health_routes` query DB for `SELECT 1`.
+   - Fraud URL analysis reads `URLSecurityRegistry` and caches registry results.
+8. Response and UI output:
+   - Routes assemble JSON responses with `success`, `analysis`, `risk_score`, `risk_level`, `reasons`.
+   - `LoggingMiddleware` appends response headers and logs latency/status.
+   - UI dashboard or extension displays risk and threat alerts.
+9. Real-time alerting:
+   - If risk score >= 45, routes create async broadcasts via `ws_manager.broadcast`.
+   - Active WebSocket clients connected to `/ws/alerts?token=<jwt>` receive JSON alert messages.
+
+5. ENTRY POINTS
+Find:
+- main file: `app/main.py`
+- startup file: `run.py` launches the app, calls health checks, then starts `uvicorn app.main:app`
+- server boot sequence:
+  1. `run.py` loads config/logger/engine.
+  2. check_database() and check_models().
+  3. Uvicorn starts `app.main:app`.
+  4. FastAPI lifespan runs startup logic.
+- extension initialization:
+  - `chrome-extension/manifest.json` defines browser action and content/background scripts.
+  - `chrome-extension/background.js` is the background script.
+  - `chrome-extension/popup.js` drives popup UI.
+- background scripts:
+  - `chrome-extension/background.js`
+  - `app/api/middleware` is not background but request middleware.
+- middleware order:
+  - `LoggingMiddleware` runs first
+  - `AuthMiddleware` runs second
+  - custom `request_timer` and `security_headers` middlewares run after built-in and custom middleware
+
+6. FEATURE BREAKDOWN
+For every feature explain:
+- Authentication:
+  - Purpose: protect API access and track users.
+  - Logic: register/login via email/phone + password, create JWT token, verify token in middleware.
+  - Important code: `app/api/routes/auth_routes.py`, `app/api/middleware/auth_middleware.py`, `app/dependencies.py`, `app/utils/password.py`, `app/database/models.py`.
+- User profile:
+  - Purpose: retrieve logged-in user details.
+  - Logic: `GET /auth/profile` and `/auth/me` read current user from JWT and query DB.
+- QR/UPI fraud detection:
+  - Purpose: analyze QR codes and UPI payment requests.
+  - Logic: decode image, parse UPI, run `execute_fraud_pipeline`, store history, broadcast alerts.
+  - Important code: `app/api/routes/qr_routes.py`, `app/services/fraud_detection_service.py`, `app/api/routes/fraud_routes.py`, `app/services/qr_service.py`, `app/services/engine/*`, `app/ml/inference/upi_predictor.py`.
+- Text/SMS fraud detection:
+  - Purpose: analyze suspicious SMS/text content.
+  - Logic: text preprocessing, ML + heuristic risk scoring, history persistence, threat notification.
+  - Important code: `app/api/routes/sms_routes.py`, `app/services/fraud_detection_service.py`, `app/services/engine/*`, `app/ml/inference/text_predictor.py`, `app/services/fraud_patterns/*`.
+- Bulk scanning:
+  - Purpose: batch scan multiple QR requests or SMS messages.
+  - Logic: loop over requests/messages, call detection, optionally broadcast threats.
+  - Important code: bulk APIs in `app/api/routes/fraud_routes.py` and `app/api/routes/sms_routes.py`.
+- History and reporting:
+  - Purpose: track user scans and reports.
+  - Logic: save scan entries, query history by user ID, update merchant registry on reports.
+  - Important code: `app/database/models.py`, `app/api/routes/fraud_routes.py`, `app/api/routes/sms_routes.py`, `app/database/seeding.py`.
+- Health monitoring:
+  - Purpose: check app, DB, ML model availability, system metrics.
+  - Logic: endpoints in `health_routes.py`, plus root `/ping` and `/system/info`.
+- WebSocket alerts:
+  - Purpose: push real-time threat alerts.
+  - Logic: WebSocket route authenticates JWT token query param, manages connections, broadcasts.
+  - Important code: `app/api/routes/ws_routes.py`, `app/services/ws_manager.py`.
+- Static dashboard:
+  - Purpose: simple frontend UI served from backend.
+  - Logic: `GET /dashboard` returns `static/safepay_updated_dashboard.html`.
+- Chrome extension:
+  - Purpose: browser-based interaction for scanning and alerts.
+  - Logic: manifest config, popup UI, background and content scripts.
+
+7. API ANALYSIS
+List all APIs/endpoints:
+- `GET /` → root; success message, version, docs/dashboard links.
+- `GET /dashboard` → serve static HTML dashboard.
+- `GET /system/info` → app/system metadata.
+- `GET /ping` → readiness.
+- `POST /auth/register` → body `name,email,phone,password`; registers user, stores hashed password, returns JWT.
+- `POST /auth/login` → body `phone/email,password`; verifies credentials, returns JWT.
+- `GET /auth/profile` → JWT protected; returns user details.
+- `GET /auth/me` → alias of profile.
+- `POST /auth/refresh-token` → JWT protected; issues new token.
+- `POST /auth/logout` → placeholder, frontend-managed.
+- `POST /fraud/scan-qr` → JWT protected; body `upi_id,amount,merchant_name?,ocr_text?`; runs QR fraud detection, saves scan history, broadcasts if risk >=45.
+- `POST /fraud/scan-text` → JWT protected; body `text,sender?,ocr_text?`; runs text fraud detection, saves scan history, broadcasts if risk >=45.
+- `POST /fraud/bulk-scan` → JWT protected; list of QR scan requests; returns batch results; broadcasts high-risk.
+- `GET /fraud/history` → JWT protected; returns user scan history from `ScanHistory`.
+- `POST /fraud/report-upi` → JWT protected; body params `upi_id,reason`; logs report and updates `UPIMerchantRegistry`.
+- `POST /qr/scan` or likely `POST /qr/...` in route (not fully read due file truncation) for image upload and decode.
+- `GET /qr/health` likely exists from route or `health_routes` config? Actually `/health/ml` and other health.
+- `POST /sms/scan` → JWT protected; body `message,sender?,ocr_text?`; runs SMS scan, stores history, logs intercept.
+- `POST /sms/bulk-scan` → JWT protected; body `messages: [string]`; batch text scan.
+- `GET /sms/history` → JWT protected; returns SMS scan history.
+- `POST /sms/report` → JWT protected; report scam SMS.
+- `GET /sms/health` → returns `service: SMS Scam Detection running`.
+- `GET /health/` → basic health.
+- `GET /health/database` → DB connectivity/latency.
+- `GET /health/ml` → model file existence.
+- `GET /health/system` → CPU/memory/disk/uptime.
+- `GET /ws/alerts` (WebSocket) → accepts JWT query param `token`, authenticates, keeps connection alive.
+
+8. DATABASE ANALYSIS
+Explain:
+- tables:
+  - `users`: registered users.
+  - `scan_history`: general scan records for user scans.
+  - `sms_scan_history`: message scan records.
+  - `qr_scan_history`: decoded QR scan records.
+  - `messages`: imported message corpus for ML/training.
+  - `upi_merchant_registry`: merchant fraud registry for UPI IDs.
+  - `url_security_registry`: registry of URL safety statuses.
+  - `communication_intercept_logs`: intercepted message logs.
+- schema:
+  - `users`: id, name, email unique, phone unique, password, role, is_active, created_at.
+  - `scan_history`: user_id FK, scan_type, input_value, risk_score, risk_level, status, created_at.
+  - `sms_scan_history`: user_id FK, sender, message, risk_score, risk_level, status, created_at.
+  - `qr_scan_history`: user_id FK, upi_id, merchant_name, amount, raw_qr, risk_score, risk_level, status, created_at.
+  - `messages`: message id, label, text, length, scam category, risk score/level.
+  - `upi_merchant_registry`: merchant_id PK, upi_id unique, merchant_name, verification flag, report_count, avg transaction.
+  - `url_security_registry`: url_id PK, raw_target_url, associated_brand, safety_status, tld_extension.
+  - `communication_intercept_logs`: message_id PK, sender_address, message_body, timestamp_received, reported_scam_category.
+- relationships:
+  - `User` has one-to-many with `ScanHistory`, `SMSScanHistory`, `QRScanHistory`.
+  - DB does not enforce cascade for registry or logs beyond foreign keys on user-owned histories.
+- important queries:
+  - `db.query(User).filter(...)` in auth routes.
+  - `db.query(ScanHistory).filter(ScanHistory.user_id == current_user[

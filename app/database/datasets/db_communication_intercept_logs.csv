@@ -1,0 +1,502 @@
+message_id,sender_address,message_body,timestamp_received,reported_scam_category
+MSG_0001,BZ-BANK565,Welcome to Phonepe! Your registration code is valid for 10 minutes.,2026-05-24 15:49:00,None
+MSG_0002,BZ-BANK602,URGENT: Your Groww account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-groww-portal.xyz/update,2026-05-20 13:04:00,Phishing Scam
+MSG_0003,BZ-TRANS909,Welcome to Googlepay! Your registration code is valid for 10 minutes.,2026-05-03 05:59:00,None
+MSG_0004,BZ-TRANS432,URGENT: Your Upstox account is SUSPENDED. Re-verify your OTP details here: http://secure-upstox-portal.xyz/update,2026-05-24 08:36:00,Phishing Scam
+MSG_0005,BZ-ALERT350,Thank you for using Fyers gateway. Rate your transaction experience.,2026-05-21 21:37:00,None
+MSG_0006,BZ-ALERT950,URGENT: Your Phonepe account is BLOCKED. Re-verify your ACCESS details here: http://secure-phonepe-portal.xyz/update,2026-05-04 12:52:00,Phishing Scam
+MSG_0007,BZ-PROMO788,Welcome to Zerodha! Your registration code is valid for 10 minutes.,2026-05-14 00:30:00,None
+MSG_0008,BZ-TRANS473,URGENT: Your Razorpay account is SUSPENDED. Re-verify your OTP details here: http://secure-razorpay-portal.xyz/update,2026-05-30 16:10:00,Phishing Scam
+MSG_0009,BZ-ALERT146,Your transaction of Rs. 2028 at Phonepe Digital was successful.,2026-05-16 22:35:00,None
+MSG_0010,BZ-BANK540,URGENT: Your Razorpay account is SUSPENDED. Re-verify your ACCESS details here: http://secure-razorpay-portal.xyz/update,2026-05-16 13:33:00,Phishing Scam
+MSG_0011,BZ-PROMO761,Thank you for using Razorpay gateway. Rate your transaction experience.,2026-05-06 06:53:00,None
+MSG_0012,BZ-PROMO764,URGENT: Your Bhim account is SUSPENDED. Re-verify your ACCESS details here: http://secure-bhim-portal.xyz/update,2026-05-12 12:26:00,Phishing Scam
+MSG_0013,BZ-PROMO860,Your transaction of Rs. 2666 at Googlepay Digital was successful.,2026-05-27 11:14:00,None
+MSG_0014,BZ-TRANS105,URGENT: Your Angelone account is DEACTIVATED. Re-verify your OTP details here: http://secure-angelone-portal.xyz/update,2026-05-28 23:21:00,Phishing Scam
+MSG_0015,BZ-BANK642,"Dear customer, your monthly e-statement for your Upstox portfolio is ready.",2026-05-01 11:15:00,None
+MSG_0016,BZ-BANK932,URGENT: Your Googlepay account is DEACTIVATED. Re-verify your KYC details here: http://secure-googlepay-portal.xyz/update,2026-05-05 17:25:00,Phishing Scam
+MSG_0017,BZ-PROMO284,Thank you for using Razorpay gateway. Rate your transaction experience.,2026-05-04 19:24:00,None
+MSG_0018,BZ-ALERT843,URGENT: Your Paytmmoney account is BLOCKED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-10 23:41:00,Phishing Scam
+MSG_0019,BZ-ALERT985,Your transaction of Rs. 3205 at Razorpay Digital was successful.,2026-05-10 22:30:00,None
+MSG_0020,BZ-BANK463,URGENT: Your Bhim account is SUSPENDED. Re-verify your OTP details here: http://secure-bhim-portal.xyz/update,2026-05-13 12:50:00,Phishing Scam
+MSG_0021,BZ-BANK851,Your transaction of Rs. 2506 at Razorpay Digital was successful.,2026-05-03 04:32:00,None
+MSG_0022,BZ-PROMO615,URGENT: Your Phonepe account is SUSPENDED. Re-verify your KYC details here: http://secure-phonepe-portal.xyz/update,2026-05-05 05:07:00,Phishing Scam
+MSG_0023,BZ-BANK207,Your transaction of Rs. 4418 at Fyers Digital was successful.,2026-05-20 03:34:00,None
+MSG_0024,BZ-PROMO923,URGENT: Your Fyers account is DEACTIVATED. Re-verify your OTP details here: http://secure-fyers-portal.xyz/update,2026-05-11 00:59:00,Phishing Scam
+MSG_0025,BZ-TRANS491,Welcome to Razorpay! Your registration code is valid for 10 minutes.,2026-05-31 00:58:00,None
+MSG_0026,BZ-BANK615,URGENT: Your Phonepe account is BLOCKED. Re-verify your ACCESS details here: http://secure-phonepe-portal.xyz/update,2026-05-17 22:05:00,Phishing Scam
+MSG_0027,BZ-ALERT285,Welcome to Fyers! Your registration code is valid for 10 minutes.,2026-05-19 20:48:00,None
+MSG_0028,BZ-BANK589,URGENT: Your Fyers account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-03 21:27:00,Phishing Scam
+MSG_0029,BZ-PROMO852,Thank you for using Googlepay gateway. Rate your transaction experience.,2026-05-26 09:05:00,None
+MSG_0030,BZ-BANK833,URGENT: Your Icicidirect account is BLOCKED. Re-verify your KYC details here: http://secure-icicidirect-portal.xyz/update,2026-05-20 04:12:00,Phishing Scam
+MSG_0031,BZ-TRANS221,Welcome to Angelone! Your registration code is valid for 10 minutes.,2026-05-20 17:53:00,None
+MSG_0032,BZ-PROMO136,URGENT: Your Zerodha account is SUSPENDED. Re-verify your KYC details here: http://secure-zerodha-portal.xyz/update,2026-05-07 08:53:00,Phishing Scam
+MSG_0033,BZ-BANK968,Your transaction of Rs. 1822 at Fyers Digital was successful.,2026-05-05 11:53:00,None
+MSG_0034,BZ-PROMO900,URGENT: Your Fyers account is SUSPENDED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-12 21:25:00,Phishing Scam
+MSG_0035,BZ-PROMO305,Your transaction of Rs. 3247 at Fyers Digital was successful.,2026-05-04 15:49:00,None
+MSG_0036,BZ-PROMO715,URGENT: Your Groww account is SUSPENDED. Re-verify your ACCESS details here: http://secure-groww-portal.xyz/update,2026-05-18 18:20:00,Phishing Scam
+MSG_0037,BZ-TRANS229,Welcome to Paytm! Your registration code is valid for 10 minutes.,2026-05-19 07:03:00,None
+MSG_0038,BZ-BANK448,URGENT: Your Paytmmoney account is SUSPENDED. Re-verify your OTP details here: http://secure-paytmmoney-portal.xyz/update,2026-05-30 20:10:00,Phishing Scam
+MSG_0039,BZ-TRANS153,Your transaction of Rs. 4924 at Paytm Digital was successful.,2026-05-25 16:55:00,None
+MSG_0040,BZ-PROMO175,URGENT: Your Groww account is SUSPENDED. Re-verify your PIN details here: http://secure-groww-portal.xyz/update,2026-05-11 09:43:00,Phishing Scam
+MSG_0041,BZ-BANK319,Thank you for using Angelone gateway. Rate your transaction experience.,2026-05-02 08:40:00,None
+MSG_0042,BZ-TRANS978,URGENT: Your Zerodha account is BLOCKED. Re-verify your KYC details here: http://secure-zerodha-portal.xyz/update,2026-05-19 05:17:00,Phishing Scam
+MSG_0043,BZ-PROMO353,Welcome to Razorpay! Your registration code is valid for 10 minutes.,2026-05-07 07:32:00,None
+MSG_0044,BZ-BANK364,URGENT: Your Paytmmoney account is DEACTIVATED. Re-verify your OTP details here: http://secure-paytmmoney-portal.xyz/update,2026-05-13 11:27:00,Phishing Scam
+MSG_0045,BZ-ALERT386,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-07 11:36:00,None
+MSG_0046,BZ-TRANS968,URGENT: Your Paytmmoney account is BLOCKED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-10 05:28:00,Phishing Scam
+MSG_0047,BZ-PROMO429,Your transaction of Rs. 4378 at Icicidirect Digital was successful.,2026-05-25 14:40:00,None
+MSG_0048,BZ-ALERT527,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your KYC details here: http://secure-phonepe-portal.xyz/update,2026-05-09 10:30:00,Phishing Scam
+MSG_0049,BZ-ALERT221,"Dear customer, your monthly e-statement for your Upstox portfolio is ready.",2026-05-21 13:58:00,None
+MSG_0050,BZ-PROMO463,URGENT: Your Fyers account is BLOCKED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-29 16:47:00,Phishing Scam
+MSG_0051,BZ-PROMO715,Thank you for using Googlepay gateway. Rate your transaction experience.,2026-05-13 22:09:00,None
+MSG_0052,BZ-ALERT523,URGENT: Your Fyers account is DEACTIVATED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-11 10:09:00,Phishing Scam
+MSG_0053,BZ-ALERT577,Welcome to Fyers! Your registration code is valid for 10 minutes.,2026-05-12 16:17:00,None
+MSG_0054,BZ-TRANS234,URGENT: Your Zerodha account is SUSPENDED. Re-verify your KYC details here: http://secure-zerodha-portal.xyz/update,2026-05-11 22:02:00,Phishing Scam
+MSG_0055,BZ-TRANS766,Thank you for using Paytm gateway. Rate your transaction experience.,2026-05-17 13:57:00,None
+MSG_0056,BZ-TRANS296,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-icicidirect-portal.xyz/update,2026-05-17 15:26:00,Phishing Scam
+MSG_0057,BZ-TRANS545,Welcome to Bhim! Your registration code is valid for 10 minutes.,2026-05-01 14:40:00,None
+MSG_0058,BZ-TRANS265,URGENT: Your Angelone account is SUSPENDED. Re-verify your ACCESS details here: http://secure-angelone-portal.xyz/update,2026-05-04 08:47:00,Phishing Scam
+MSG_0059,BZ-BANK239,Thank you for using Phonepe gateway. Rate your transaction experience.,2026-05-21 19:10:00,None
+MSG_0060,BZ-BANK631,URGENT: Your Fyers account is DEACTIVATED. Re-verify your KYC details here: http://secure-fyers-portal.xyz/update,2026-05-06 19:43:00,Phishing Scam
+MSG_0061,BZ-BANK447,Thank you for using Zerodha gateway. Rate your transaction experience.,2026-05-26 11:01:00,None
+MSG_0062,BZ-TRANS329,URGENT: Your Paytmmoney account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-paytmmoney-portal.xyz/update,2026-05-20 14:34:00,Phishing Scam
+MSG_0063,BZ-PROMO409,Thank you for using Icicidirect gateway. Rate your transaction experience.,2026-05-03 04:06:00,None
+MSG_0064,BZ-ALERT919,URGENT: Your Fyers account is SUSPENDED. Re-verify your KYC details here: http://secure-fyers-portal.xyz/update,2026-05-14 04:09:00,Phishing Scam
+MSG_0065,BZ-TRANS756,Thank you for using Icicidirect gateway. Rate your transaction experience.,2026-05-21 09:27:00,None
+MSG_0066,BZ-TRANS226,URGENT: Your Angelone account is SUSPENDED. Re-verify your ACCESS details here: http://secure-angelone-portal.xyz/update,2026-05-08 01:49:00,Phishing Scam
+MSG_0067,BZ-TRANS726,Your transaction of Rs. 2003 at Groww Digital was successful.,2026-05-25 09:10:00,None
+MSG_0068,BZ-ALERT896,URGENT: Your Zerodha account is BLOCKED. Re-verify your OTP details here: http://secure-zerodha-portal.xyz/update,2026-05-19 15:09:00,Phishing Scam
+MSG_0069,BZ-TRANS661,Your transaction of Rs. 3795 at Upstox Digital was successful.,2026-05-08 12:28:00,None
+MSG_0070,BZ-PROMO732,URGENT: Your Razorpay account is SUSPENDED. Re-verify your ACCESS details here: http://secure-razorpay-portal.xyz/update,2026-05-06 11:15:00,Phishing Scam
+MSG_0071,BZ-BANK482,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-17 07:34:00,None
+MSG_0072,BZ-ALERT140,URGENT: Your Icicidirect account is SUSPENDED. Re-verify your PIN details here: http://secure-icicidirect-portal.xyz/update,2026-05-04 05:09:00,Phishing Scam
+MSG_0073,BZ-BANK684,"Dear customer, your monthly e-statement for your Bhim portfolio is ready.",2026-05-10 14:50:00,None
+MSG_0074,BZ-PROMO712,URGENT: Your Upstox account is DEACTIVATED. Re-verify your PIN details here: http://secure-upstox-portal.xyz/update,2026-05-24 12:55:00,Phishing Scam
+MSG_0075,BZ-BANK929,Thank you for using Bhim gateway. Rate your transaction experience.,2026-05-04 00:41:00,None
+MSG_0076,BZ-TRANS616,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your KYC details here: http://secure-phonepe-portal.xyz/update,2026-05-26 18:30:00,Phishing Scam
+MSG_0077,BZ-BANK615,Thank you for using Googlepay gateway. Rate your transaction experience.,2026-05-21 17:22:00,None
+MSG_0078,BZ-ALERT758,URGENT: Your Razorpay account is BLOCKED. Re-verify your PIN details here: http://secure-razorpay-portal.xyz/update,2026-05-17 00:34:00,Phishing Scam
+MSG_0079,BZ-PROMO473,Thank you for using Hdfcsec gateway. Rate your transaction experience.,2026-05-10 13:20:00,None
+MSG_0080,BZ-ALERT353,URGENT: Your Googlepay account is SUSPENDED. Re-verify your OTP details here: http://secure-googlepay-portal.xyz/update,2026-05-26 23:44:00,Phishing Scam
+MSG_0081,BZ-BANK165,"Dear customer, your monthly e-statement for your Googlepay portfolio is ready.",2026-05-11 17:15:00,None
+MSG_0082,BZ-TRANS238,URGENT: Your Hdfcsec account is DEACTIVATED. Re-verify your KYC details here: http://secure-hdfcsec-portal.xyz/update,2026-05-10 19:54:00,Phishing Scam
+MSG_0083,BZ-PROMO405,Your transaction of Rs. 3273 at Razorpay Digital was successful.,2026-05-28 16:34:00,None
+MSG_0084,BZ-TRANS658,URGENT: Your Icicidirect account is SUSPENDED. Re-verify your ACCESS details here: http://secure-icicidirect-portal.xyz/update,2026-05-15 07:34:00,Phishing Scam
+MSG_0085,BZ-PROMO837,Your transaction of Rs. 4032 at Paytmmoney Digital was successful.,2026-05-27 23:45:00,None
+MSG_0086,BZ-BANK291,URGENT: Your Googlepay account is BLOCKED. Re-verify your ACCESS details here: http://secure-googlepay-portal.xyz/update,2026-05-25 19:50:00,Phishing Scam
+MSG_0087,BZ-PROMO925,Welcome to Razorpay! Your registration code is valid for 10 minutes.,2026-05-19 22:00:00,None
+MSG_0088,BZ-BANK634,URGENT: Your Fyers account is DEACTIVATED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-14 06:11:00,Phishing Scam
+MSG_0089,BZ-BANK408,"Dear customer, your monthly e-statement for your Bhim portfolio is ready.",2026-05-11 15:18:00,None
+MSG_0090,BZ-BANK407,URGENT: Your Razorpay account is DEACTIVATED. Re-verify your KYC details here: http://secure-razorpay-portal.xyz/update,2026-05-03 19:44:00,Phishing Scam
+MSG_0091,BZ-BANK621,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-23 01:47:00,None
+MSG_0092,BZ-BANK219,URGENT: Your Icicidirect account is BLOCKED. Re-verify your KYC details here: http://secure-icicidirect-portal.xyz/update,2026-05-01 08:36:00,Phishing Scam
+MSG_0093,BZ-BANK214,Thank you for using Googlepay gateway. Rate your transaction experience.,2026-05-26 06:43:00,None
+MSG_0094,BZ-BANK982,URGENT: Your Angelone account is BLOCKED. Re-verify your PIN details here: http://secure-angelone-portal.xyz/update,2026-05-28 19:02:00,Phishing Scam
+MSG_0095,BZ-TRANS721,Your transaction of Rs. 2724 at Upstox Digital was successful.,2026-05-29 01:23:00,None
+MSG_0096,BZ-BANK968,URGENT: Your Icicidirect account is BLOCKED. Re-verify your PIN details here: http://secure-icicidirect-portal.xyz/update,2026-05-19 14:17:00,Phishing Scam
+MSG_0097,BZ-BANK971,Welcome to Angelone! Your registration code is valid for 10 minutes.,2026-05-11 13:19:00,None
+MSG_0098,BZ-ALERT489,URGENT: Your Zerodha account is DEACTIVATED. Re-verify your PIN details here: http://secure-zerodha-portal.xyz/update,2026-05-18 09:01:00,Phishing Scam
+MSG_0099,BZ-PROMO440,Thank you for using Hdfcsec gateway. Rate your transaction experience.,2026-05-07 07:59:00,None
+MSG_0100,BZ-ALERT638,URGENT: Your Upstox account is BLOCKED. Re-verify your PIN details here: http://secure-upstox-portal.xyz/update,2026-05-07 05:04:00,Phishing Scam
+MSG_0101,BZ-BANK869,"Dear customer, your monthly e-statement for your Upstox portfolio is ready.",2026-05-22 23:57:00,None
+MSG_0102,BZ-PROMO247,URGENT: Your Paytm account is DEACTIVATED. Re-verify your OTP details here: http://secure-paytm-portal.xyz/update,2026-05-11 07:34:00,Phishing Scam
+MSG_0103,BZ-ALERT578,"Dear customer, your monthly e-statement for your Angelone portfolio is ready.",2026-05-29 20:53:00,None
+MSG_0104,BZ-BANK416,URGENT: Your Hdfcsec account is BLOCKED. Re-verify your KYC details here: http://secure-hdfcsec-portal.xyz/update,2026-05-17 04:26:00,Phishing Scam
+MSG_0105,BZ-ALERT832,Welcome to Icicidirect! Your registration code is valid for 10 minutes.,2026-05-21 19:34:00,None
+MSG_0106,BZ-TRANS634,URGENT: Your Phonepe account is SUSPENDED. Re-verify your OTP details here: http://secure-phonepe-portal.xyz/update,2026-05-20 15:59:00,Phishing Scam
+MSG_0107,BZ-PROMO156,Thank you for using Paytmmoney gateway. Rate your transaction experience.,2026-05-12 21:31:00,None
+MSG_0108,BZ-PROMO803,URGENT: Your Razorpay account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-razorpay-portal.xyz/update,2026-05-24 18:47:00,Phishing Scam
+MSG_0109,BZ-ALERT472,Thank you for using Phonepe gateway. Rate your transaction experience.,2026-05-25 09:29:00,None
+MSG_0110,BZ-BANK131,URGENT: Your Fyers account is SUSPENDED. Re-verify your KYC details here: http://secure-fyers-portal.xyz/update,2026-05-17 02:32:00,Phishing Scam
+MSG_0111,BZ-TRANS493,Thank you for using Googlepay gateway. Rate your transaction experience.,2026-05-23 09:45:00,None
+MSG_0112,BZ-ALERT960,URGENT: Your Groww account is SUSPENDED. Re-verify your KYC details here: http://secure-groww-portal.xyz/update,2026-05-12 12:32:00,Phishing Scam
+MSG_0113,BZ-TRANS829,Your transaction of Rs. 3999 at Hdfcsec Digital was successful.,2026-05-20 12:36:00,None
+MSG_0114,BZ-TRANS333,URGENT: Your Googlepay account is SUSPENDED. Re-verify your ACCESS details here: http://secure-googlepay-portal.xyz/update,2026-05-28 22:00:00,Phishing Scam
+MSG_0115,BZ-BANK226,Your transaction of Rs. 2352 at Zerodha Digital was successful.,2026-05-07 18:35:00,None
+MSG_0116,BZ-TRANS401,URGENT: Your Paytm account is SUSPENDED. Re-verify your PIN details here: http://secure-paytm-portal.xyz/update,2026-05-25 06:02:00,Phishing Scam
+MSG_0117,BZ-ALERT968,Welcome to Bhim! Your registration code is valid for 10 minutes.,2026-05-20 00:18:00,None
+MSG_0118,BZ-PROMO650,URGENT: Your Phonepe account is BLOCKED. Re-verify your KYC details here: http://secure-phonepe-portal.xyz/update,2026-05-27 18:57:00,Phishing Scam
+MSG_0119,BZ-ALERT750,Thank you for using Paytmmoney gateway. Rate your transaction experience.,2026-05-26 17:27:00,None
+MSG_0120,BZ-TRANS487,URGENT: Your Angelone account is BLOCKED. Re-verify your PIN details here: http://secure-angelone-portal.xyz/update,2026-05-08 23:09:00,Phishing Scam
+MSG_0121,BZ-ALERT305,Welcome to Zerodha! Your registration code is valid for 10 minutes.,2026-05-31 01:00:00,None
+MSG_0122,BZ-ALERT176,URGENT: Your Groww account is DEACTIVATED. Re-verify your KYC details here: http://secure-groww-portal.xyz/update,2026-05-26 14:43:00,Phishing Scam
+MSG_0123,BZ-PROMO231,Thank you for using Zerodha gateway. Rate your transaction experience.,2026-05-23 17:13:00,None
+MSG_0124,BZ-TRANS438,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-phonepe-portal.xyz/update,2026-05-18 12:44:00,Phishing Scam
+MSG_0125,BZ-ALERT160,"Dear customer, your monthly e-statement for your Hdfcsec portfolio is ready.",2026-05-15 01:35:00,None
+MSG_0126,BZ-BANK821,URGENT: Your Paytmmoney account is SUSPENDED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-07 02:48:00,Phishing Scam
+MSG_0127,BZ-PROMO728,Welcome to Googlepay! Your registration code is valid for 10 minutes.,2026-05-07 02:22:00,None
+MSG_0128,BZ-TRANS586,URGENT: Your Fyers account is SUSPENDED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-12 17:37:00,Phishing Scam
+MSG_0129,BZ-BANK917,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-26 16:03:00,None
+MSG_0130,BZ-BANK205,URGENT: Your Fyers account is BLOCKED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-19 08:12:00,Phishing Scam
+MSG_0131,BZ-TRANS343,"Dear customer, your monthly e-statement for your Paytmmoney portfolio is ready.",2026-05-01 03:13:00,None
+MSG_0132,BZ-ALERT294,URGENT: Your Googlepay account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-googlepay-portal.xyz/update,2026-05-18 11:48:00,Phishing Scam
+MSG_0133,BZ-PROMO261,Your transaction of Rs. 716 at Angelone Digital was successful.,2026-05-07 21:41:00,None
+MSG_0134,BZ-PROMO391,URGENT: Your Angelone account is SUSPENDED. Re-verify your ACCESS details here: http://secure-angelone-portal.xyz/update,2026-05-26 21:27:00,Phishing Scam
+MSG_0135,BZ-PROMO899,Thank you for using Paytmmoney gateway. Rate your transaction experience.,2026-05-29 10:17:00,None
+MSG_0136,BZ-TRANS783,URGENT: Your Bhim account is DEACTIVATED. Re-verify your PIN details here: http://secure-bhim-portal.xyz/update,2026-05-14 07:48:00,Phishing Scam
+MSG_0137,BZ-PROMO240,Thank you for using Razorpay gateway. Rate your transaction experience.,2026-05-26 10:52:00,None
+MSG_0138,BZ-PROMO125,URGENT: Your Paytmmoney account is BLOCKED. Re-verify your OTP details here: http://secure-paytmmoney-portal.xyz/update,2026-05-09 15:55:00,Phishing Scam
+MSG_0139,BZ-PROMO599,"Dear customer, your monthly e-statement for your Phonepe portfolio is ready.",2026-05-28 07:53:00,None
+MSG_0140,BZ-ALERT402,URGENT: Your Bhim account is DEACTIVATED. Re-verify your PIN details here: http://secure-bhim-portal.xyz/update,2026-05-16 02:26:00,Phishing Scam
+MSG_0141,BZ-BANK708,Welcome to Paytm! Your registration code is valid for 10 minutes.,2026-05-02 13:54:00,None
+MSG_0142,BZ-TRANS787,URGENT: Your Icicidirect account is BLOCKED. Re-verify your ACCESS details here: http://secure-icicidirect-portal.xyz/update,2026-05-25 11:27:00,Phishing Scam
+MSG_0143,BZ-ALERT372,"Dear customer, your monthly e-statement for your Googlepay portfolio is ready.",2026-05-20 19:50:00,None
+MSG_0144,BZ-ALERT302,URGENT: Your Groww account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-groww-portal.xyz/update,2026-05-19 09:30:00,Phishing Scam
+MSG_0145,BZ-TRANS582,Your transaction of Rs. 4597 at Razorpay Digital was successful.,2026-05-20 18:20:00,None
+MSG_0146,BZ-PROMO437,URGENT: Your Groww account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-groww-portal.xyz/update,2026-05-11 06:39:00,Phishing Scam
+MSG_0147,BZ-TRANS890,Your transaction of Rs. 691 at Googlepay Digital was successful.,2026-05-08 14:17:00,None
+MSG_0148,BZ-TRANS367,URGENT: Your Googlepay account is SUSPENDED. Re-verify your OTP details here: http://secure-googlepay-portal.xyz/update,2026-05-14 01:37:00,Phishing Scam
+MSG_0149,BZ-BANK392,Your transaction of Rs. 4523 at Angelone Digital was successful.,2026-05-01 16:24:00,None
+MSG_0150,BZ-BANK732,URGENT: Your Fyers account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-07 11:16:00,Phishing Scam
+MSG_0151,BZ-PROMO980,Thank you for using Fyers gateway. Rate your transaction experience.,2026-05-31 17:51:00,None
+MSG_0152,BZ-TRANS268,URGENT: Your Googlepay account is BLOCKED. Re-verify your OTP details here: http://secure-googlepay-portal.xyz/update,2026-05-16 22:58:00,Phishing Scam
+MSG_0153,BZ-TRANS203,Welcome to Paytmmoney! Your registration code is valid for 10 minutes.,2026-05-25 13:02:00,None
+MSG_0154,BZ-ALERT129,URGENT: Your Paytm account is DEACTIVATED. Re-verify your KYC details here: http://secure-paytm-portal.xyz/update,2026-05-29 11:58:00,Phishing Scam
+MSG_0155,BZ-ALERT127,Welcome to Zerodha! Your registration code is valid for 10 minutes.,2026-05-24 07:02:00,None
+MSG_0156,BZ-PROMO970,URGENT: Your Upstox account is BLOCKED. Re-verify your OTP details here: http://secure-upstox-portal.xyz/update,2026-05-14 12:00:00,Phishing Scam
+MSG_0157,BZ-TRANS874,Thank you for using Zerodha gateway. Rate your transaction experience.,2026-05-04 11:06:00,None
+MSG_0158,BZ-PROMO127,URGENT: Your Googlepay account is SUSPENDED. Re-verify your ACCESS details here: http://secure-googlepay-portal.xyz/update,2026-05-11 12:02:00,Phishing Scam
+MSG_0159,BZ-BANK914,"Dear customer, your monthly e-statement for your Zerodha portfolio is ready.",2026-05-15 19:21:00,None
+MSG_0160,BZ-ALERT491,URGENT: Your Groww account is BLOCKED. Re-verify your PIN details here: http://secure-groww-portal.xyz/update,2026-05-22 14:10:00,Phishing Scam
+MSG_0161,BZ-TRANS764,Thank you for using Groww gateway. Rate your transaction experience.,2026-05-03 02:59:00,None
+MSG_0162,BZ-PROMO204,URGENT: Your Groww account is SUSPENDED. Re-verify your OTP details here: http://secure-groww-portal.xyz/update,2026-05-15 13:13:00,Phishing Scam
+MSG_0163,BZ-ALERT685,"Dear customer, your monthly e-statement for your Phonepe portfolio is ready.",2026-05-04 00:11:00,None
+MSG_0164,BZ-PROMO343,URGENT: Your Angelone account is DEACTIVATED. Re-verify your KYC details here: http://secure-angelone-portal.xyz/update,2026-05-20 22:26:00,Phishing Scam
+MSG_0165,BZ-PROMO787,"Dear customer, your monthly e-statement for your Zerodha portfolio is ready.",2026-05-04 13:18:00,None
+MSG_0166,BZ-TRANS628,URGENT: Your Phonepe account is BLOCKED. Re-verify your PIN details here: http://secure-phonepe-portal.xyz/update,2026-05-28 22:37:00,Phishing Scam
+MSG_0167,BZ-TRANS339,Thank you for using Groww gateway. Rate your transaction experience.,2026-05-16 05:22:00,None
+MSG_0168,BZ-PROMO654,URGENT: Your Razorpay account is DEACTIVATED. Re-verify your OTP details here: http://secure-razorpay-portal.xyz/update,2026-05-03 23:24:00,Phishing Scam
+MSG_0169,BZ-BANK910,Your transaction of Rs. 4863 at Razorpay Digital was successful.,2026-05-01 09:24:00,None
+MSG_0170,BZ-BANK412,URGENT: Your Hdfcsec account is BLOCKED. Re-verify your PIN details here: http://secure-hdfcsec-portal.xyz/update,2026-05-28 05:46:00,Phishing Scam
+MSG_0171,BZ-TRANS745,"Dear customer, your monthly e-statement for your Razorpay portfolio is ready.",2026-05-27 09:01:00,None
+MSG_0172,BZ-PROMO892,URGENT: Your Phonepe account is BLOCKED. Re-verify your PIN details here: http://secure-phonepe-portal.xyz/update,2026-05-17 23:38:00,Phishing Scam
+MSG_0173,BZ-ALERT560,Welcome to Paytmmoney! Your registration code is valid for 10 minutes.,2026-05-02 05:36:00,None
+MSG_0174,BZ-PROMO865,URGENT: Your Fyers account is SUSPENDED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-17 21:59:00,Phishing Scam
+MSG_0175,BZ-ALERT790,Your transaction of Rs. 4066 at Paytm Digital was successful.,2026-05-20 05:05:00,None
+MSG_0176,BZ-ALERT873,URGENT: Your Bhim account is DEACTIVATED. Re-verify your PIN details here: http://secure-bhim-portal.xyz/update,2026-05-31 15:27:00,Phishing Scam
+MSG_0177,BZ-ALERT417,"Dear customer, your monthly e-statement for your Upstox portfolio is ready.",2026-05-15 22:51:00,None
+MSG_0178,BZ-BANK233,URGENT: Your Paytmmoney account is DEACTIVATED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-26 18:22:00,Phishing Scam
+MSG_0179,BZ-TRANS928,Your transaction of Rs. 3083 at Upstox Digital was successful.,2026-05-22 18:31:00,None
+MSG_0180,BZ-ALERT885,URGENT: Your Hdfcsec account is SUSPENDED. Re-verify your KYC details here: http://secure-hdfcsec-portal.xyz/update,2026-05-20 03:32:00,Phishing Scam
+MSG_0181,BZ-ALERT450,Welcome to Icicidirect! Your registration code is valid for 10 minutes.,2026-05-21 04:59:00,None
+MSG_0182,BZ-TRANS657,URGENT: Your Fyers account is SUSPENDED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-12 16:51:00,Phishing Scam
+MSG_0183,BZ-ALERT654,Your transaction of Rs. 3208 at Phonepe Digital was successful.,2026-05-18 00:10:00,None
+MSG_0184,BZ-TRANS115,URGENT: Your Googlepay account is BLOCKED. Re-verify your KYC details here: http://secure-googlepay-portal.xyz/update,2026-05-12 02:23:00,Phishing Scam
+MSG_0185,BZ-BANK412,Welcome to Phonepe! Your registration code is valid for 10 minutes.,2026-05-15 11:49:00,None
+MSG_0186,BZ-PROMO375,URGENT: Your Googlepay account is BLOCKED. Re-verify your PIN details here: http://secure-googlepay-portal.xyz/update,2026-05-21 21:46:00,Phishing Scam
+MSG_0187,BZ-TRANS838,Your transaction of Rs. 879 at Zerodha Digital was successful.,2026-05-15 05:27:00,None
+MSG_0188,BZ-BANK217,URGENT: Your Angelone account is DEACTIVATED. Re-verify your OTP details here: http://secure-angelone-portal.xyz/update,2026-05-24 08:16:00,Phishing Scam
+MSG_0189,BZ-ALERT399,Your transaction of Rs. 4059 at Fyers Digital was successful.,2026-05-01 03:02:00,None
+MSG_0190,BZ-PROMO114,URGENT: Your Zerodha account is DEACTIVATED. Re-verify your KYC details here: http://secure-zerodha-portal.xyz/update,2026-05-11 09:50:00,Phishing Scam
+MSG_0191,BZ-ALERT877,Your transaction of Rs. 1085 at Upstox Digital was successful.,2026-05-13 05:19:00,None
+MSG_0192,BZ-ALERT590,URGENT: Your Razorpay account is SUSPENDED. Re-verify your PIN details here: http://secure-razorpay-portal.xyz/update,2026-05-23 16:02:00,Phishing Scam
+MSG_0193,BZ-PROMO423,Thank you for using Razorpay gateway. Rate your transaction experience.,2026-05-04 10:06:00,None
+MSG_0194,BZ-PROMO393,URGENT: Your Upstox account is BLOCKED. Re-verify your KYC details here: http://secure-upstox-portal.xyz/update,2026-05-20 19:22:00,Phishing Scam
+MSG_0195,BZ-BANK554,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-23 10:54:00,None
+MSG_0196,BZ-ALERT124,URGENT: Your Googlepay account is SUSPENDED. Re-verify your ACCESS details here: http://secure-googlepay-portal.xyz/update,2026-05-02 07:01:00,Phishing Scam
+MSG_0197,BZ-BANK359,Thank you for using Bhim gateway. Rate your transaction experience.,2026-05-26 01:50:00,None
+MSG_0198,BZ-BANK971,URGENT: Your Upstox account is SUSPENDED. Re-verify your PIN details here: http://secure-upstox-portal.xyz/update,2026-05-27 09:25:00,Phishing Scam
+MSG_0199,BZ-TRANS179,"Dear customer, your monthly e-statement for your Hdfcsec portfolio is ready.",2026-05-09 13:08:00,None
+MSG_0200,BZ-ALERT929,URGENT: Your Zerodha account is BLOCKED. Re-verify your ACCESS details here: http://secure-zerodha-portal.xyz/update,2026-05-05 06:32:00,Phishing Scam
+MSG_0201,BZ-BANK832,Your transaction of Rs. 1008 at Phonepe Digital was successful.,2026-05-04 08:35:00,None
+MSG_0202,BZ-ALERT711,URGENT: Your Zerodha account is SUSPENDED. Re-verify your KYC details here: http://secure-zerodha-portal.xyz/update,2026-05-11 14:12:00,Phishing Scam
+MSG_0203,BZ-BANK579,Thank you for using Bhim gateway. Rate your transaction experience.,2026-05-27 07:22:00,None
+MSG_0204,BZ-PROMO128,URGENT: Your Upstox account is SUSPENDED. Re-verify your KYC details here: http://secure-upstox-portal.xyz/update,2026-05-10 00:34:00,Phishing Scam
+MSG_0205,BZ-ALERT587,Welcome to Paytm! Your registration code is valid for 10 minutes.,2026-05-30 17:55:00,None
+MSG_0206,BZ-ALERT307,URGENT: Your Fyers account is BLOCKED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-16 04:55:00,Phishing Scam
+MSG_0207,BZ-TRANS313,Thank you for using Phonepe gateway. Rate your transaction experience.,2026-05-15 23:16:00,None
+MSG_0208,BZ-BANK955,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-phonepe-portal.xyz/update,2026-05-29 11:17:00,Phishing Scam
+MSG_0209,BZ-ALERT957,Your transaction of Rs. 2912 at Upstox Digital was successful.,2026-05-04 07:19:00,None
+MSG_0210,BZ-ALERT859,URGENT: Your Bhim account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-bhim-portal.xyz/update,2026-05-01 07:16:00,Phishing Scam
+MSG_0211,BZ-PROMO389,"Dear customer, your monthly e-statement for your Paytmmoney portfolio is ready.",2026-05-21 13:46:00,None
+MSG_0212,BZ-BANK394,URGENT: Your Paytm account is DEACTIVATED. Re-verify your PIN details here: http://secure-paytm-portal.xyz/update,2026-05-13 05:24:00,Phishing Scam
+MSG_0213,BZ-ALERT103,Welcome to Razorpay! Your registration code is valid for 10 minutes.,2026-05-06 21:00:00,None
+MSG_0214,BZ-ALERT133,URGENT: Your Paytm account is DEACTIVATED. Re-verify your PIN details here: http://secure-paytm-portal.xyz/update,2026-05-19 04:52:00,Phishing Scam
+MSG_0215,BZ-PROMO762,Welcome to Phonepe! Your registration code is valid for 10 minutes.,2026-05-21 19:41:00,None
+MSG_0216,BZ-PROMO368,URGENT: Your Zerodha account is DEACTIVATED. Re-verify your OTP details here: http://secure-zerodha-portal.xyz/update,2026-05-01 18:52:00,Phishing Scam
+MSG_0217,BZ-BANK466,"Dear customer, your monthly e-statement for your Razorpay portfolio is ready.",2026-05-28 08:03:00,None
+MSG_0218,BZ-ALERT930,URGENT: Your Groww account is BLOCKED. Re-verify your KYC details here: http://secure-groww-portal.xyz/update,2026-05-07 03:31:00,Phishing Scam
+MSG_0219,BZ-BANK586,Your transaction of Rs. 1310 at Icicidirect Digital was successful.,2026-05-29 21:25:00,None
+MSG_0220,BZ-TRANS221,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your OTP details here: http://secure-icicidirect-portal.xyz/update,2026-05-01 19:59:00,Phishing Scam
+MSG_0221,BZ-ALERT473,"Dear customer, your monthly e-statement for your Googlepay portfolio is ready.",2026-05-17 03:21:00,None
+MSG_0222,BZ-ALERT428,URGENT: Your Groww account is SUSPENDED. Re-verify your ACCESS details here: http://secure-groww-portal.xyz/update,2026-05-31 12:29:00,Phishing Scam
+MSG_0223,BZ-BANK883,Thank you for using Phonepe gateway. Rate your transaction experience.,2026-05-27 06:24:00,None
+MSG_0224,BZ-PROMO499,URGENT: Your Paytmmoney account is DEACTIVATED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-09 02:26:00,Phishing Scam
+MSG_0225,BZ-PROMO138,Thank you for using Razorpay gateway. Rate your transaction experience.,2026-05-28 09:46:00,None
+MSG_0226,BZ-ALERT393,URGENT: Your Groww account is BLOCKED. Re-verify your ACCESS details here: http://secure-groww-portal.xyz/update,2026-05-06 22:12:00,Phishing Scam
+MSG_0227,BZ-ALERT699,Welcome to Razorpay! Your registration code is valid for 10 minutes.,2026-05-10 02:19:00,None
+MSG_0228,BZ-PROMO712,URGENT: Your Razorpay account is BLOCKED. Re-verify your OTP details here: http://secure-razorpay-portal.xyz/update,2026-05-17 23:28:00,Phishing Scam
+MSG_0229,BZ-BANK332,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-21 11:36:00,None
+MSG_0230,BZ-TRANS958,URGENT: Your Phonepe account is SUSPENDED. Re-verify your KYC details here: http://secure-phonepe-portal.xyz/update,2026-05-05 05:14:00,Phishing Scam
+MSG_0231,BZ-ALERT542,Welcome to Fyers! Your registration code is valid for 10 minutes.,2026-05-07 02:25:00,None
+MSG_0232,BZ-PROMO279,URGENT: Your Angelone account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-angelone-portal.xyz/update,2026-05-29 23:51:00,Phishing Scam
+MSG_0233,BZ-BANK891,Your transaction of Rs. 425 at Zerodha Digital was successful.,2026-05-21 04:30:00,None
+MSG_0234,BZ-BANK304,URGENT: Your Zerodha account is SUSPENDED. Re-verify your KYC details here: http://secure-zerodha-portal.xyz/update,2026-05-24 06:52:00,Phishing Scam
+MSG_0235,BZ-TRANS799,Your transaction of Rs. 1210 at Phonepe Digital was successful.,2026-05-23 11:20:00,None
+MSG_0236,BZ-BANK751,URGENT: Your Razorpay account is DEACTIVATED. Re-verify your PIN details here: http://secure-razorpay-portal.xyz/update,2026-05-14 12:24:00,Phishing Scam
+MSG_0237,BZ-ALERT691,Your transaction of Rs. 3993 at Razorpay Digital was successful.,2026-05-15 02:28:00,None
+MSG_0238,BZ-ALERT385,URGENT: Your Paytmmoney account is SUSPENDED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-30 08:46:00,Phishing Scam
+MSG_0239,BZ-ALERT944,"Dear customer, your monthly e-statement for your Razorpay portfolio is ready.",2026-05-03 10:34:00,None
+MSG_0240,BZ-TRANS222,URGENT: Your Hdfcsec account is BLOCKED. Re-verify your PIN details here: http://secure-hdfcsec-portal.xyz/update,2026-05-21 02:07:00,Phishing Scam
+MSG_0241,BZ-PROMO876,Thank you for using Bhim gateway. Rate your transaction experience.,2026-05-01 21:47:00,None
+MSG_0242,BZ-PROMO667,URGENT: Your Googlepay account is BLOCKED. Re-verify your KYC details here: http://secure-googlepay-portal.xyz/update,2026-05-01 13:15:00,Phishing Scam
+MSG_0243,BZ-TRANS898,"Dear customer, your monthly e-statement for your Bhim portfolio is ready.",2026-05-11 19:56:00,None
+MSG_0244,BZ-PROMO779,URGENT: Your Upstox account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-upstox-portal.xyz/update,2026-05-04 07:31:00,Phishing Scam
+MSG_0245,BZ-PROMO453,Thank you for using Razorpay gateway. Rate your transaction experience.,2026-05-09 18:48:00,None
+MSG_0246,BZ-ALERT154,URGENT: Your Googlepay account is SUSPENDED. Re-verify your ACCESS details here: http://secure-googlepay-portal.xyz/update,2026-05-18 03:43:00,Phishing Scam
+MSG_0247,BZ-BANK107,"Dear customer, your monthly e-statement for your Angelone portfolio is ready.",2026-05-24 09:24:00,None
+MSG_0248,BZ-TRANS727,URGENT: Your Phonepe account is SUSPENDED. Re-verify your KYC details here: http://secure-phonepe-portal.xyz/update,2026-05-21 13:51:00,Phishing Scam
+MSG_0249,BZ-BANK602,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-12 12:40:00,None
+MSG_0250,BZ-BANK530,URGENT: Your Bhim account is SUSPENDED. Re-verify your KYC details here: http://secure-bhim-portal.xyz/update,2026-05-26 13:17:00,Phishing Scam
+MSG_0251,BZ-PROMO230,"Dear customer, your monthly e-statement for your Upstox portfolio is ready.",2026-05-14 05:53:00,None
+MSG_0252,BZ-PROMO790,URGENT: Your Fyers account is DEACTIVATED. Re-verify your KYC details here: http://secure-fyers-portal.xyz/update,2026-05-13 02:34:00,Phishing Scam
+MSG_0253,BZ-TRANS536,Thank you for using Hdfcsec gateway. Rate your transaction experience.,2026-05-31 14:25:00,None
+MSG_0254,BZ-ALERT801,URGENT: Your Hdfcsec account is SUSPENDED. Re-verify your KYC details here: http://secure-hdfcsec-portal.xyz/update,2026-05-25 10:46:00,Phishing Scam
+MSG_0255,BZ-TRANS732,Your transaction of Rs. 1767 at Phonepe Digital was successful.,2026-05-25 13:03:00,None
+MSG_0256,BZ-TRANS277,URGENT: Your Hdfcsec account is SUSPENDED. Re-verify your KYC details here: http://secure-hdfcsec-portal.xyz/update,2026-05-28 12:42:00,Phishing Scam
+MSG_0257,BZ-BANK204,Welcome to Fyers! Your registration code is valid for 10 minutes.,2026-05-23 07:21:00,None
+MSG_0258,BZ-ALERT654,URGENT: Your Angelone account is BLOCKED. Re-verify your KYC details here: http://secure-angelone-portal.xyz/update,2026-05-14 15:17:00,Phishing Scam
+MSG_0259,BZ-ALERT138,Welcome to Angelone! Your registration code is valid for 10 minutes.,2026-05-06 09:34:00,None
+MSG_0260,BZ-PROMO699,URGENT: Your Phonepe account is BLOCKED. Re-verify your OTP details here: http://secure-phonepe-portal.xyz/update,2026-05-16 22:06:00,Phishing Scam
+MSG_0261,BZ-PROMO498,Thank you for using Hdfcsec gateway. Rate your transaction experience.,2026-05-07 04:05:00,None
+MSG_0262,BZ-ALERT187,URGENT: Your Fyers account is SUSPENDED. Re-verify your KYC details here: http://secure-fyers-portal.xyz/update,2026-05-07 10:00:00,Phishing Scam
+MSG_0263,BZ-TRANS729,Your transaction of Rs. 2006 at Fyers Digital was successful.,2026-05-03 07:47:00,None
+MSG_0264,BZ-PROMO409,URGENT: Your Fyers account is DEACTIVATED. Re-verify your KYC details here: http://secure-fyers-portal.xyz/update,2026-05-25 23:45:00,Phishing Scam
+MSG_0265,BZ-ALERT433,Thank you for using Zerodha gateway. Rate your transaction experience.,2026-05-19 15:21:00,None
+MSG_0266,BZ-PROMO813,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your KYC details here: http://secure-icicidirect-portal.xyz/update,2026-05-02 05:31:00,Phishing Scam
+MSG_0267,BZ-TRANS265,"Dear customer, your monthly e-statement for your Zerodha portfolio is ready.",2026-05-30 09:45:00,None
+MSG_0268,BZ-PROMO143,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your KYC details here: http://secure-icicidirect-portal.xyz/update,2026-05-05 04:46:00,Phishing Scam
+MSG_0269,BZ-ALERT157,Your transaction of Rs. 262 at Paytm Digital was successful.,2026-05-30 04:49:00,None
+MSG_0270,BZ-PROMO315,URGENT: Your Fyers account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-22 23:59:00,Phishing Scam
+MSG_0271,BZ-PROMO999,Welcome to Zerodha! Your registration code is valid for 10 minutes.,2026-05-17 09:55:00,None
+MSG_0272,BZ-BANK479,URGENT: Your Upstox account is SUSPENDED. Re-verify your PIN details here: http://secure-upstox-portal.xyz/update,2026-05-12 13:38:00,Phishing Scam
+MSG_0273,BZ-BANK239,Welcome to Hdfcsec! Your registration code is valid for 10 minutes.,2026-05-30 03:25:00,None
+MSG_0274,BZ-BANK375,URGENT: Your Icicidirect account is SUSPENDED. Re-verify your OTP details here: http://secure-icicidirect-portal.xyz/update,2026-05-19 10:04:00,Phishing Scam
+MSG_0275,BZ-ALERT130,Thank you for using Groww gateway. Rate your transaction experience.,2026-05-20 11:41:00,None
+MSG_0276,BZ-PROMO579,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your PIN details here: http://secure-icicidirect-portal.xyz/update,2026-05-20 17:09:00,Phishing Scam
+MSG_0277,BZ-ALERT205,Welcome to Phonepe! Your registration code is valid for 10 minutes.,2026-05-26 23:33:00,None
+MSG_0278,BZ-BANK492,URGENT: Your Paytm account is BLOCKED. Re-verify your KYC details here: http://secure-paytm-portal.xyz/update,2026-05-30 09:59:00,Phishing Scam
+MSG_0279,BZ-PROMO643,"Dear customer, your monthly e-statement for your Angelone portfolio is ready.",2026-05-20 05:50:00,None
+MSG_0280,BZ-ALERT798,URGENT: Your Bhim account is SUSPENDED. Re-verify your OTP details here: http://secure-bhim-portal.xyz/update,2026-05-25 16:07:00,Phishing Scam
+MSG_0281,BZ-PROMO173,Your transaction of Rs. 4552 at Groww Digital was successful.,2026-05-27 02:44:00,None
+MSG_0282,BZ-BANK495,URGENT: Your Paytm account is DEACTIVATED. Re-verify your OTP details here: http://secure-paytm-portal.xyz/update,2026-05-23 00:31:00,Phishing Scam
+MSG_0283,BZ-PROMO783,"Dear customer, your monthly e-statement for your Icicidirect portfolio is ready.",2026-05-31 17:50:00,None
+MSG_0284,BZ-ALERT470,URGENT: Your Angelone account is SUSPENDED. Re-verify your KYC details here: http://secure-angelone-portal.xyz/update,2026-05-26 01:46:00,Phishing Scam
+MSG_0285,BZ-PROMO699,"Dear customer, your monthly e-statement for your Upstox portfolio is ready.",2026-05-27 21:33:00,None
+MSG_0286,BZ-ALERT978,URGENT: Your Hdfcsec account is SUSPENDED. Re-verify your OTP details here: http://secure-hdfcsec-portal.xyz/update,2026-05-12 02:35:00,Phishing Scam
+MSG_0287,BZ-BANK700,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-28 17:39:00,None
+MSG_0288,BZ-PROMO195,URGENT: Your Phonepe account is BLOCKED. Re-verify your KYC details here: http://secure-phonepe-portal.xyz/update,2026-05-14 01:31:00,Phishing Scam
+MSG_0289,BZ-ALERT940,Welcome to Paytmmoney! Your registration code is valid for 10 minutes.,2026-05-24 02:57:00,None
+MSG_0290,BZ-BANK189,URGENT: Your Icicidirect account is BLOCKED. Re-verify your PIN details here: http://secure-icicidirect-portal.xyz/update,2026-05-31 15:32:00,Phishing Scam
+MSG_0291,BZ-PROMO695,"Dear customer, your monthly e-statement for your Fyers portfolio is ready.",2026-05-31 10:32:00,None
+MSG_0292,BZ-PROMO883,URGENT: Your Zerodha account is SUSPENDED. Re-verify your ACCESS details here: http://secure-zerodha-portal.xyz/update,2026-05-19 07:47:00,Phishing Scam
+MSG_0293,BZ-PROMO923,Your transaction of Rs. 4104 at Hdfcsec Digital was successful.,2026-05-02 14:59:00,None
+MSG_0294,BZ-TRANS478,URGENT: Your Zerodha account is BLOCKED. Re-verify your OTP details here: http://secure-zerodha-portal.xyz/update,2026-05-16 07:45:00,Phishing Scam
+MSG_0295,BZ-BANK448,"Dear customer, your monthly e-statement for your Groww portfolio is ready.",2026-05-31 08:51:00,None
+MSG_0296,BZ-ALERT717,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your OTP details here: http://secure-icicidirect-portal.xyz/update,2026-05-30 01:13:00,Phishing Scam
+MSG_0297,BZ-TRANS604,Your transaction of Rs. 4886 at Googlepay Digital was successful.,2026-05-25 11:03:00,None
+MSG_0298,BZ-ALERT205,URGENT: Your Paytm account is SUSPENDED. Re-verify your OTP details here: http://secure-paytm-portal.xyz/update,2026-05-26 11:03:00,Phishing Scam
+MSG_0299,BZ-PROMO680,Thank you for using Angelone gateway. Rate your transaction experience.,2026-05-10 09:41:00,None
+MSG_0300,BZ-TRANS348,URGENT: Your Bhim account is BLOCKED. Re-verify your PIN details here: http://secure-bhim-portal.xyz/update,2026-05-22 17:42:00,Phishing Scam
+MSG_0301,BZ-PROMO827,Thank you for using Paytmmoney gateway. Rate your transaction experience.,2026-05-26 16:35:00,None
+MSG_0302,BZ-BANK897,URGENT: Your Groww account is BLOCKED. Re-verify your OTP details here: http://secure-groww-portal.xyz/update,2026-05-01 15:55:00,Phishing Scam
+MSG_0303,BZ-ALERT658,Thank you for using Angelone gateway. Rate your transaction experience.,2026-05-10 17:01:00,None
+MSG_0304,BZ-ALERT433,URGENT: Your Hdfcsec account is DEACTIVATED. Re-verify your PIN details here: http://secure-hdfcsec-portal.xyz/update,2026-05-30 19:55:00,Phishing Scam
+MSG_0305,BZ-TRANS634,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-29 23:56:00,None
+MSG_0306,BZ-PROMO355,URGENT: Your Bhim account is SUSPENDED. Re-verify your KYC details here: http://secure-bhim-portal.xyz/update,2026-05-01 20:10:00,Phishing Scam
+MSG_0307,BZ-ALERT763,Thank you for using Upstox gateway. Rate your transaction experience.,2026-05-15 08:40:00,None
+MSG_0308,BZ-BANK585,URGENT: Your Fyers account is BLOCKED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-03 14:57:00,Phishing Scam
+MSG_0309,BZ-BANK103,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-07 06:34:00,None
+MSG_0310,BZ-PROMO513,URGENT: Your Razorpay account is DEACTIVATED. Re-verify your KYC details here: http://secure-razorpay-portal.xyz/update,2026-05-13 15:45:00,Phishing Scam
+MSG_0311,BZ-TRANS741,Your transaction of Rs. 2188 at Phonepe Digital was successful.,2026-05-24 23:42:00,None
+MSG_0312,BZ-BANK827,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-phonepe-portal.xyz/update,2026-05-21 16:12:00,Phishing Scam
+MSG_0313,BZ-PROMO253,Your transaction of Rs. 4843 at Googlepay Digital was successful.,2026-05-29 10:35:00,None
+MSG_0314,BZ-TRANS878,URGENT: Your Angelone account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-angelone-portal.xyz/update,2026-05-31 19:49:00,Phishing Scam
+MSG_0315,BZ-BANK781,"Dear customer, your monthly e-statement for your Groww portfolio is ready.",2026-05-29 23:24:00,None
+MSG_0316,BZ-PROMO673,URGENT: Your Zerodha account is SUSPENDED. Re-verify your ACCESS details here: http://secure-zerodha-portal.xyz/update,2026-05-18 12:15:00,Phishing Scam
+MSG_0317,BZ-ALERT319,Your transaction of Rs. 4972 at Fyers Digital was successful.,2026-05-31 14:28:00,None
+MSG_0318,BZ-TRANS220,URGENT: Your Fyers account is DEACTIVATED. Re-verify your KYC details here: http://secure-fyers-portal.xyz/update,2026-05-08 05:12:00,Phishing Scam
+MSG_0319,BZ-TRANS658,"Dear customer, your monthly e-statement for your Groww portfolio is ready.",2026-05-31 01:16:00,None
+MSG_0320,BZ-ALERT832,URGENT: Your Zerodha account is SUSPENDED. Re-verify your PIN details here: http://secure-zerodha-portal.xyz/update,2026-05-05 22:00:00,Phishing Scam
+MSG_0321,BZ-TRANS585,"Dear customer, your monthly e-statement for your Paytmmoney portfolio is ready.",2026-05-18 02:03:00,None
+MSG_0322,BZ-PROMO992,URGENT: Your Paytmmoney account is DEACTIVATED. Re-verify your KYC details here: http://secure-paytmmoney-portal.xyz/update,2026-05-23 08:53:00,Phishing Scam
+MSG_0323,BZ-TRANS230,Your transaction of Rs. 2560 at Paytm Digital was successful.,2026-05-23 15:10:00,None
+MSG_0324,BZ-BANK922,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your OTP details here: http://secure-phonepe-portal.xyz/update,2026-05-23 20:43:00,Phishing Scam
+MSG_0325,BZ-BANK399,Your transaction of Rs. 4002 at Groww Digital was successful.,2026-05-30 17:53:00,None
+MSG_0326,BZ-PROMO736,URGENT: Your Upstox account is DEACTIVATED. Re-verify your KYC details here: http://secure-upstox-portal.xyz/update,2026-05-17 11:19:00,Phishing Scam
+MSG_0327,BZ-TRANS569,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-20 12:29:00,None
+MSG_0328,BZ-PROMO448,URGENT: Your Zerodha account is DEACTIVATED. Re-verify your PIN details here: http://secure-zerodha-portal.xyz/update,2026-05-01 15:52:00,Phishing Scam
+MSG_0329,BZ-BANK834,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-22 14:40:00,None
+MSG_0330,BZ-TRANS921,URGENT: Your Paytmmoney account is DEACTIVATED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-12 05:54:00,Phishing Scam
+MSG_0331,BZ-TRANS343,Thank you for using Groww gateway. Rate your transaction experience.,2026-05-29 08:37:00,None
+MSG_0332,BZ-PROMO855,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your PIN details here: http://secure-icicidirect-portal.xyz/update,2026-05-20 03:27:00,Phishing Scam
+MSG_0333,BZ-ALERT821,Welcome to Bhim! Your registration code is valid for 10 minutes.,2026-05-10 20:13:00,None
+MSG_0334,BZ-ALERT837,URGENT: Your Hdfcsec account is DEACTIVATED. Re-verify your OTP details here: http://secure-hdfcsec-portal.xyz/update,2026-05-08 10:12:00,Phishing Scam
+MSG_0335,BZ-BANK618,"Dear customer, your monthly e-statement for your Phonepe portfolio is ready.",2026-05-10 20:37:00,None
+MSG_0336,BZ-TRANS309,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your PIN details here: http://secure-phonepe-portal.xyz/update,2026-05-20 05:58:00,Phishing Scam
+MSG_0337,BZ-ALERT153,Thank you for using Icicidirect gateway. Rate your transaction experience.,2026-05-10 15:22:00,None
+MSG_0338,BZ-ALERT555,URGENT: Your Hdfcsec account is BLOCKED. Re-verify your PIN details here: http://secure-hdfcsec-portal.xyz/update,2026-05-27 12:18:00,Phishing Scam
+MSG_0339,BZ-ALERT564,Welcome to Paytm! Your registration code is valid for 10 minutes.,2026-05-02 11:08:00,None
+MSG_0340,BZ-PROMO229,URGENT: Your Groww account is BLOCKED. Re-verify your OTP details here: http://secure-groww-portal.xyz/update,2026-05-29 13:42:00,Phishing Scam
+MSG_0341,BZ-PROMO269,Your transaction of Rs. 557 at Groww Digital was successful.,2026-05-13 09:42:00,None
+MSG_0342,BZ-BANK412,URGENT: Your Zerodha account is SUSPENDED. Re-verify your PIN details here: http://secure-zerodha-portal.xyz/update,2026-05-01 21:33:00,Phishing Scam
+MSG_0343,BZ-BANK861,Your transaction of Rs. 554 at Bhim Digital was successful.,2026-05-20 13:42:00,None
+MSG_0344,BZ-ALERT584,URGENT: Your Razorpay account is SUSPENDED. Re-verify your PIN details here: http://secure-razorpay-portal.xyz/update,2026-05-22 17:57:00,Phishing Scam
+MSG_0345,BZ-ALERT126,Your transaction of Rs. 1744 at Paytmmoney Digital was successful.,2026-05-02 23:15:00,None
+MSG_0346,BZ-TRANS735,URGENT: Your Googlepay account is DEACTIVATED. Re-verify your OTP details here: http://secure-googlepay-portal.xyz/update,2026-05-13 20:07:00,Phishing Scam
+MSG_0347,BZ-PROMO940,Thank you for using Paytmmoney gateway. Rate your transaction experience.,2026-05-03 13:46:00,None
+MSG_0348,BZ-TRANS176,URGENT: Your Zerodha account is BLOCKED. Re-verify your ACCESS details here: http://secure-zerodha-portal.xyz/update,2026-05-12 23:40:00,Phishing Scam
+MSG_0349,BZ-ALERT609,Welcome to Zerodha! Your registration code is valid for 10 minutes.,2026-05-29 17:20:00,None
+MSG_0350,BZ-BANK355,URGENT: Your Razorpay account is BLOCKED. Re-verify your ACCESS details here: http://secure-razorpay-portal.xyz/update,2026-05-14 08:23:00,Phishing Scam
+MSG_0351,BZ-ALERT855,"Dear customer, your monthly e-statement for your Fyers portfolio is ready.",2026-05-18 16:12:00,None
+MSG_0352,BZ-ALERT520,URGENT: Your Upstox account is DEACTIVATED. Re-verify your OTP details here: http://secure-upstox-portal.xyz/update,2026-05-07 07:07:00,Phishing Scam
+MSG_0353,BZ-PROMO147,Welcome to Fyers! Your registration code is valid for 10 minutes.,2026-05-07 11:41:00,None
+MSG_0354,BZ-TRANS750,URGENT: Your Razorpay account is BLOCKED. Re-verify your KYC details here: http://secure-razorpay-portal.xyz/update,2026-05-05 16:46:00,Phishing Scam
+MSG_0355,BZ-TRANS185,Your transaction of Rs. 935 at Googlepay Digital was successful.,2026-05-08 12:14:00,None
+MSG_0356,BZ-TRANS446,URGENT: Your Fyers account is SUSPENDED. Re-verify your OTP details here: http://secure-fyers-portal.xyz/update,2026-05-04 13:00:00,Phishing Scam
+MSG_0357,BZ-BANK662,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-14 23:28:00,None
+MSG_0358,BZ-TRANS675,URGENT: Your Paytmmoney account is SUSPENDED. Re-verify your KYC details here: http://secure-paytmmoney-portal.xyz/update,2026-05-25 07:36:00,Phishing Scam
+MSG_0359,BZ-ALERT254,Thank you for using Hdfcsec gateway. Rate your transaction experience.,2026-05-13 09:42:00,None
+MSG_0360,BZ-PROMO148,URGENT: Your Razorpay account is SUSPENDED. Re-verify your PIN details here: http://secure-razorpay-portal.xyz/update,2026-05-31 08:42:00,Phishing Scam
+MSG_0361,BZ-ALERT457,"Dear customer, your monthly e-statement for your Googlepay portfolio is ready.",2026-05-06 19:06:00,None
+MSG_0362,BZ-BANK675,URGENT: Your Paytmmoney account is SUSPENDED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-09 21:54:00,Phishing Scam
+MSG_0363,BZ-ALERT595,"Dear customer, your monthly e-statement for your Zerodha portfolio is ready.",2026-05-20 21:07:00,None
+MSG_0364,BZ-PROMO793,URGENT: Your Bhim account is BLOCKED. Re-verify your ACCESS details here: http://secure-bhim-portal.xyz/update,2026-05-18 10:34:00,Phishing Scam
+MSG_0365,BZ-BANK814,Welcome to Paytmmoney! Your registration code is valid for 10 minutes.,2026-05-20 08:02:00,None
+MSG_0366,BZ-TRANS555,URGENT: Your Paytm account is DEACTIVATED. Re-verify your OTP details here: http://secure-paytm-portal.xyz/update,2026-05-06 01:43:00,Phishing Scam
+MSG_0367,BZ-BANK792,Your transaction of Rs. 593 at Phonepe Digital was successful.,2026-05-29 01:50:00,None
+MSG_0368,BZ-TRANS444,URGENT: Your Bhim account is DEACTIVATED. Re-verify your PIN details here: http://secure-bhim-portal.xyz/update,2026-05-07 16:49:00,Phishing Scam
+MSG_0369,BZ-TRANS967,Your transaction of Rs. 176 at Upstox Digital was successful.,2026-05-16 12:29:00,None
+MSG_0370,BZ-ALERT629,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your KYC details here: http://secure-icicidirect-portal.xyz/update,2026-05-23 01:44:00,Phishing Scam
+MSG_0371,BZ-ALERT530,Your transaction of Rs. 3425 at Bhim Digital was successful.,2026-05-20 11:15:00,None
+MSG_0372,BZ-PROMO305,URGENT: Your Zerodha account is BLOCKED. Re-verify your OTP details here: http://secure-zerodha-portal.xyz/update,2026-05-06 15:54:00,Phishing Scam
+MSG_0373,BZ-BANK573,Thank you for using Groww gateway. Rate your transaction experience.,2026-05-28 20:24:00,None
+MSG_0374,BZ-ALERT539,URGENT: Your Googlepay account is BLOCKED. Re-verify your KYC details here: http://secure-googlepay-portal.xyz/update,2026-05-06 21:31:00,Phishing Scam
+MSG_0375,BZ-PROMO719,Welcome to Fyers! Your registration code is valid for 10 minutes.,2026-05-07 00:29:00,None
+MSG_0376,BZ-ALERT379,URGENT: Your Bhim account is SUSPENDED. Re-verify your ACCESS details here: http://secure-bhim-portal.xyz/update,2026-05-16 03:11:00,Phishing Scam
+MSG_0377,BZ-BANK891,Your transaction of Rs. 4945 at Angelone Digital was successful.,2026-05-29 16:07:00,None
+MSG_0378,BZ-ALERT860,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your KYC details here: http://secure-icicidirect-portal.xyz/update,2026-05-19 00:49:00,Phishing Scam
+MSG_0379,BZ-ALERT771,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-29 00:06:00,None
+MSG_0380,BZ-PROMO388,URGENT: Your Fyers account is DEACTIVATED. Re-verify your KYC details here: http://secure-fyers-portal.xyz/update,2026-05-05 15:58:00,Phishing Scam
+MSG_0381,BZ-PROMO368,Your transaction of Rs. 2669 at Phonepe Digital was successful.,2026-05-04 11:34:00,None
+MSG_0382,BZ-ALERT644,URGENT: Your Phonepe account is BLOCKED. Re-verify your OTP details here: http://secure-phonepe-portal.xyz/update,2026-05-13 15:40:00,Phishing Scam
+MSG_0383,BZ-PROMO931,"Dear customer, your monthly e-statement for your Fyers portfolio is ready.",2026-05-26 11:32:00,None
+MSG_0384,BZ-BANK192,URGENT: Your Upstox account is SUSPENDED. Re-verify your PIN details here: http://secure-upstox-portal.xyz/update,2026-05-04 08:18:00,Phishing Scam
+MSG_0385,BZ-BANK915,Welcome to Googlepay! Your registration code is valid for 10 minutes.,2026-05-03 01:00:00,None
+MSG_0386,BZ-PROMO786,URGENT: Your Angelone account is SUSPENDED. Re-verify your PIN details here: http://secure-angelone-portal.xyz/update,2026-05-20 11:15:00,Phishing Scam
+MSG_0387,BZ-TRANS184,Your transaction of Rs. 232 at Fyers Digital was successful.,2026-05-15 15:33:00,None
+MSG_0388,BZ-PROMO233,URGENT: Your Paytm account is SUSPENDED. Re-verify your KYC details here: http://secure-paytm-portal.xyz/update,2026-05-29 23:36:00,Phishing Scam
+MSG_0389,BZ-TRANS982,"Dear customer, your monthly e-statement for your Paytmmoney portfolio is ready.",2026-05-27 14:02:00,None
+MSG_0390,BZ-TRANS853,URGENT: Your Razorpay account is SUSPENDED. Re-verify your OTP details here: http://secure-razorpay-portal.xyz/update,2026-05-28 15:48:00,Phishing Scam
+MSG_0391,BZ-TRANS542,Thank you for using Groww gateway. Rate your transaction experience.,2026-05-11 14:01:00,None
+MSG_0392,BZ-ALERT495,URGENT: Your Angelone account is BLOCKED. Re-verify your KYC details here: http://secure-angelone-portal.xyz/update,2026-05-30 13:04:00,Phishing Scam
+MSG_0393,BZ-TRANS322,Your transaction of Rs. 1797 at Razorpay Digital was successful.,2026-05-19 15:06:00,None
+MSG_0394,BZ-BANK729,URGENT: Your Zerodha account is BLOCKED. Re-verify your ACCESS details here: http://secure-zerodha-portal.xyz/update,2026-05-24 16:41:00,Phishing Scam
+MSG_0395,BZ-BANK458,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-26 11:34:00,None
+MSG_0396,BZ-TRANS878,URGENT: Your Groww account is BLOCKED. Re-verify your KYC details here: http://secure-groww-portal.xyz/update,2026-05-09 16:40:00,Phishing Scam
+MSG_0397,BZ-PROMO282,"Dear customer, your monthly e-statement for your Groww portfolio is ready.",2026-05-28 17:36:00,None
+MSG_0398,BZ-TRANS717,URGENT: Your Fyers account is SUSPENDED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-13 18:41:00,Phishing Scam
+MSG_0399,BZ-BANK968,"Dear customer, your monthly e-statement for your Upstox portfolio is ready.",2026-05-29 23:07:00,None
+MSG_0400,BZ-PROMO484,URGENT: Your Angelone account is SUSPENDED. Re-verify your KYC details here: http://secure-angelone-portal.xyz/update,2026-05-19 15:56:00,Phishing Scam
+MSG_0401,BZ-PROMO615,"Dear customer, your monthly e-statement for your Groww portfolio is ready.",2026-05-03 08:28:00,None
+MSG_0402,BZ-BANK760,URGENT: Your Zerodha account is SUSPENDED. Re-verify your PIN details here: http://secure-zerodha-portal.xyz/update,2026-05-31 23:37:00,Phishing Scam
+MSG_0403,BZ-TRANS570,"Dear customer, your monthly e-statement for your Googlepay portfolio is ready.",2026-05-29 21:36:00,None
+MSG_0404,BZ-TRANS538,URGENT: Your Bhim account is SUSPENDED. Re-verify your OTP details here: http://secure-bhim-portal.xyz/update,2026-05-09 16:18:00,Phishing Scam
+MSG_0405,BZ-ALERT186,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-19 06:10:00,None
+MSG_0406,BZ-ALERT614,URGENT: Your Groww account is SUSPENDED. Re-verify your ACCESS details here: http://secure-groww-portal.xyz/update,2026-05-26 13:45:00,Phishing Scam
+MSG_0407,BZ-TRANS706,Your transaction of Rs. 1105 at Groww Digital was successful.,2026-05-28 01:48:00,None
+MSG_0408,BZ-PROMO660,URGENT: Your Icicidirect account is DEACTIVATED. Re-verify your OTP details here: http://secure-icicidirect-portal.xyz/update,2026-05-11 03:27:00,Phishing Scam
+MSG_0409,BZ-ALERT948,Thank you for using Icicidirect gateway. Rate your transaction experience.,2026-05-18 18:22:00,None
+MSG_0410,BZ-PROMO126,URGENT: Your Icicidirect account is BLOCKED. Re-verify your ACCESS details here: http://secure-icicidirect-portal.xyz/update,2026-05-27 10:37:00,Phishing Scam
+MSG_0411,BZ-BANK125,Your transaction of Rs. 2610 at Groww Digital was successful.,2026-05-23 03:23:00,None
+MSG_0412,BZ-PROMO764,URGENT: Your Groww account is BLOCKED. Re-verify your OTP details here: http://secure-groww-portal.xyz/update,2026-05-04 07:29:00,Phishing Scam
+MSG_0413,BZ-PROMO531,Welcome to Groww! Your registration code is valid for 10 minutes.,2026-05-04 17:22:00,None
+MSG_0414,BZ-PROMO676,URGENT: Your Hdfcsec account is DEACTIVATED. Re-verify your PIN details here: http://secure-hdfcsec-portal.xyz/update,2026-05-17 19:43:00,Phishing Scam
+MSG_0415,BZ-ALERT587,Your transaction of Rs. 676 at Fyers Digital was successful.,2026-05-17 19:00:00,None
+MSG_0416,BZ-ALERT252,URGENT: Your Upstox account is DEACTIVATED. Re-verify your KYC details here: http://secure-upstox-portal.xyz/update,2026-05-31 18:51:00,Phishing Scam
+MSG_0417,BZ-ALERT781,"Dear customer, your monthly e-statement for your Icicidirect portfolio is ready.",2026-05-04 09:19:00,None
+MSG_0418,BZ-ALERT111,URGENT: Your Upstox account is DEACTIVATED. Re-verify your KYC details here: http://secure-upstox-portal.xyz/update,2026-05-21 03:15:00,Phishing Scam
+MSG_0419,BZ-BANK494,Your transaction of Rs. 3824 at Bhim Digital was successful.,2026-05-10 04:52:00,None
+MSG_0420,BZ-PROMO611,URGENT: Your Fyers account is SUSPENDED. Re-verify your OTP details here: http://secure-fyers-portal.xyz/update,2026-05-14 05:15:00,Phishing Scam
+MSG_0421,BZ-TRANS149,Welcome to Paytm! Your registration code is valid for 10 minutes.,2026-05-19 22:40:00,None
+MSG_0422,BZ-BANK902,URGENT: Your Paytm account is SUSPENDED. Re-verify your PIN details here: http://secure-paytm-portal.xyz/update,2026-05-24 09:37:00,Phishing Scam
+MSG_0423,BZ-PROMO336,Your transaction of Rs. 3634 at Angelone Digital was successful.,2026-05-08 20:07:00,None
+MSG_0424,BZ-BANK673,URGENT: Your Bhim account is BLOCKED. Re-verify your OTP details here: http://secure-bhim-portal.xyz/update,2026-05-08 21:05:00,Phishing Scam
+MSG_0425,BZ-TRANS495,Thank you for using Phonepe gateway. Rate your transaction experience.,2026-05-28 21:59:00,None
+MSG_0426,BZ-BANK988,URGENT: Your Zerodha account is BLOCKED. Re-verify your KYC details here: http://secure-zerodha-portal.xyz/update,2026-05-19 07:45:00,Phishing Scam
+MSG_0427,BZ-ALERT497,Your transaction of Rs. 3706 at Googlepay Digital was successful.,2026-05-21 10:56:00,None
+MSG_0428,BZ-ALERT854,URGENT: Your Icicidirect account is BLOCKED. Re-verify your ACCESS details here: http://secure-icicidirect-portal.xyz/update,2026-05-22 16:01:00,Phishing Scam
+MSG_0429,BZ-ALERT494,Welcome to Icicidirect! Your registration code is valid for 10 minutes.,2026-05-13 07:21:00,None
+MSG_0430,BZ-ALERT156,URGENT: Your Paytm account is BLOCKED. Re-verify your ACCESS details here: http://secure-paytm-portal.xyz/update,2026-05-13 16:51:00,Phishing Scam
+MSG_0431,BZ-TRANS370,Thank you for using Hdfcsec gateway. Rate your transaction experience.,2026-05-23 03:30:00,None
+MSG_0432,BZ-BANK787,URGENT: Your Groww account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-groww-portal.xyz/update,2026-05-05 06:29:00,Phishing Scam
+MSG_0433,BZ-ALERT926,Thank you for using Googlepay gateway. Rate your transaction experience.,2026-05-13 12:27:00,None
+MSG_0434,BZ-ALERT199,URGENT: Your Hdfcsec account is BLOCKED. Re-verify your OTP details here: http://secure-hdfcsec-portal.xyz/update,2026-05-06 10:11:00,Phishing Scam
+MSG_0435,BZ-ALERT867,Your transaction of Rs. 4441 at Fyers Digital was successful.,2026-05-10 13:56:00,None
+MSG_0436,BZ-PROMO444,URGENT: Your Angelone account is SUSPENDED. Re-verify your OTP details here: http://secure-angelone-portal.xyz/update,2026-05-11 01:18:00,Phishing Scam
+MSG_0437,BZ-BANK902,"Dear customer, your monthly e-statement for your Groww portfolio is ready.",2026-05-31 19:43:00,None
+MSG_0438,BZ-ALERT657,URGENT: Your Groww account is BLOCKED. Re-verify your PIN details here: http://secure-groww-portal.xyz/update,2026-05-20 03:52:00,Phishing Scam
+MSG_0439,BZ-BANK398,Thank you for using Angelone gateway. Rate your transaction experience.,2026-05-30 00:00:00,None
+MSG_0440,BZ-PROMO159,URGENT: Your Googlepay account is BLOCKED. Re-verify your PIN details here: http://secure-googlepay-portal.xyz/update,2026-05-28 22:16:00,Phishing Scam
+MSG_0441,BZ-PROMO678,"Dear customer, your monthly e-statement for your Googlepay portfolio is ready.",2026-05-08 08:04:00,None
+MSG_0442,BZ-BANK760,URGENT: Your Icicidirect account is BLOCKED. Re-verify your PIN details here: http://secure-icicidirect-portal.xyz/update,2026-05-03 13:29:00,Phishing Scam
+MSG_0443,BZ-PROMO841,Welcome to Upstox! Your registration code is valid for 10 minutes.,2026-05-18 09:45:00,None
+MSG_0444,BZ-ALERT475,URGENT: Your Fyers account is BLOCKED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-23 06:19:00,Phishing Scam
+MSG_0445,BZ-PROMO715,Your transaction of Rs. 2496 at Razorpay Digital was successful.,2026-05-15 00:11:00,None
+MSG_0446,BZ-TRANS890,URGENT: Your Hdfcsec account is DEACTIVATED. Re-verify your KYC details here: http://secure-hdfcsec-portal.xyz/update,2026-05-03 21:22:00,Phishing Scam
+MSG_0447,BZ-PROMO352,Thank you for using Hdfcsec gateway. Rate your transaction experience.,2026-05-20 13:25:00,None
+MSG_0448,BZ-PROMO797,URGENT: Your Paytmmoney account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-paytmmoney-portal.xyz/update,2026-05-11 08:30:00,Phishing Scam
+MSG_0449,BZ-BANK528,Welcome to Icicidirect! Your registration code is valid for 10 minutes.,2026-05-23 19:59:00,None
+MSG_0450,BZ-TRANS452,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-phonepe-portal.xyz/update,2026-05-03 22:22:00,Phishing Scam
+MSG_0451,BZ-PROMO578,"Dear customer, your monthly e-statement for your Hdfcsec portfolio is ready.",2026-05-29 23:45:00,None
+MSG_0452,BZ-TRANS369,URGENT: Your Zerodha account is SUSPENDED. Re-verify your OTP details here: http://secure-zerodha-portal.xyz/update,2026-05-27 01:54:00,Phishing Scam
+MSG_0453,BZ-ALERT421,Thank you for using Phonepe gateway. Rate your transaction experience.,2026-05-15 19:11:00,None
+MSG_0454,BZ-TRANS856,URGENT: Your Bhim account is SUSPENDED. Re-verify your OTP details here: http://secure-bhim-portal.xyz/update,2026-05-08 16:17:00,Phishing Scam
+MSG_0455,BZ-ALERT409,"Dear customer, your monthly e-statement for your Bhim portfolio is ready.",2026-05-13 02:45:00,None
+MSG_0456,BZ-PROMO739,URGENT: Your Bhim account is SUSPENDED. Re-verify your KYC details here: http://secure-bhim-portal.xyz/update,2026-05-01 03:00:00,Phishing Scam
+MSG_0457,BZ-PROMO759,Your transaction of Rs. 1451 at Razorpay Digital was successful.,2026-05-08 13:39:00,None
+MSG_0458,BZ-ALERT898,URGENT: Your Fyers account is SUSPENDED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-02 02:13:00,Phishing Scam
+MSG_0459,BZ-ALERT845,Your transaction of Rs. 492 at Phonepe Digital was successful.,2026-05-21 14:11:00,None
+MSG_0460,BZ-ALERT888,URGENT: Your Paytmmoney account is SUSPENDED. Re-verify your PIN details here: http://secure-paytmmoney-portal.xyz/update,2026-05-29 08:21:00,Phishing Scam
+MSG_0461,BZ-ALERT193,Your transaction of Rs. 595 at Upstox Digital was successful.,2026-05-29 18:19:00,None
+MSG_0462,BZ-PROMO309,URGENT: Your Paytm account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-paytm-portal.xyz/update,2026-05-31 10:39:00,Phishing Scam
+MSG_0463,BZ-TRANS853,Welcome to Phonepe! Your registration code is valid for 10 minutes.,2026-05-04 10:37:00,None
+MSG_0464,BZ-BANK229,URGENT: Your Zerodha account is BLOCKED. Re-verify your PIN details here: http://secure-zerodha-portal.xyz/update,2026-05-22 22:22:00,Phishing Scam
+MSG_0465,BZ-ALERT273,Your transaction of Rs. 3815 at Icicidirect Digital was successful.,2026-05-23 07:00:00,None
+MSG_0466,BZ-PROMO423,URGENT: Your Phonepe account is BLOCKED. Re-verify your KYC details here: http://secure-phonepe-portal.xyz/update,2026-05-25 04:12:00,Phishing Scam
+MSG_0467,BZ-TRANS738,Welcome to Hdfcsec! Your registration code is valid for 10 minutes.,2026-05-22 00:56:00,None
+MSG_0468,BZ-PROMO166,URGENT: Your Zerodha account is BLOCKED. Re-verify your KYC details here: http://secure-zerodha-portal.xyz/update,2026-05-12 12:28:00,Phishing Scam
+MSG_0469,BZ-PROMO407,Your transaction of Rs. 3920 at Bhim Digital was successful.,2026-05-24 11:13:00,None
+MSG_0470,BZ-BANK237,URGENT: Your Bhim account is DEACTIVATED. Re-verify your OTP details here: http://secure-bhim-portal.xyz/update,2026-05-24 02:17:00,Phishing Scam
+MSG_0471,BZ-ALERT335,"Dear customer, your monthly e-statement for your Upstox portfolio is ready.",2026-05-18 04:56:00,None
+MSG_0472,BZ-TRANS772,URGENT: Your Icicidirect account is BLOCKED. Re-verify your OTP details here: http://secure-icicidirect-portal.xyz/update,2026-05-21 19:10:00,Phishing Scam
+MSG_0473,BZ-ALERT393,"Dear customer, your monthly e-statement for your Paytm portfolio is ready.",2026-05-17 08:18:00,None
+MSG_0474,BZ-ALERT675,URGENT: Your Fyers account is SUSPENDED. Re-verify your ACCESS details here: http://secure-fyers-portal.xyz/update,2026-05-20 10:52:00,Phishing Scam
+MSG_0475,BZ-BANK158,Thank you for using Razorpay gateway. Rate your transaction experience.,2026-05-07 07:10:00,None
+MSG_0476,BZ-ALERT438,URGENT: Your Hdfcsec account is DEACTIVATED. Re-verify your KYC details here: http://secure-hdfcsec-portal.xyz/update,2026-05-20 03:04:00,Phishing Scam
+MSG_0477,BZ-TRANS506,"Dear customer, your monthly e-statement for your Phonepe portfolio is ready.",2026-05-24 07:45:00,None
+MSG_0478,BZ-BANK446,URGENT: Your Bhim account is DEACTIVATED. Re-verify your KYC details here: http://secure-bhim-portal.xyz/update,2026-05-14 15:38:00,Phishing Scam
+MSG_0479,BZ-TRANS680,"Dear customer, your monthly e-statement for your Bhim portfolio is ready.",2026-05-14 14:10:00,None
+MSG_0480,BZ-BANK811,URGENT: Your Paytmmoney account is SUSPENDED. Re-verify your OTP details here: http://secure-paytmmoney-portal.xyz/update,2026-05-15 07:03:00,Phishing Scam
+MSG_0481,BZ-BANK113,Your transaction of Rs. 1607 at Icicidirect Digital was successful.,2026-05-02 15:44:00,None
+MSG_0482,BZ-PROMO413,URGENT: Your Paytm account is BLOCKED. Re-verify your ACCESS details here: http://secure-paytm-portal.xyz/update,2026-05-17 05:47:00,Phishing Scam
+MSG_0483,BZ-PROMO709,Thank you for using Icicidirect gateway. Rate your transaction experience.,2026-05-25 22:33:00,None
+MSG_0484,BZ-BANK807,URGENT: Your Paytm account is SUSPENDED. Re-verify your PIN details here: http://secure-paytm-portal.xyz/update,2026-05-12 00:43:00,Phishing Scam
+MSG_0485,BZ-PROMO924,Thank you for using Razorpay gateway. Rate your transaction experience.,2026-05-12 18:09:00,None
+MSG_0486,BZ-BANK277,URGENT: Your Razorpay account is SUSPENDED. Re-verify your PIN details here: http://secure-razorpay-portal.xyz/update,2026-05-24 20:39:00,Phishing Scam
+MSG_0487,BZ-ALERT675,Your transaction of Rs. 4680 at Razorpay Digital was successful.,2026-05-19 02:46:00,None
+MSG_0488,BZ-PROMO547,URGENT: Your Bhim account is BLOCKED. Re-verify your PIN details here: http://secure-bhim-portal.xyz/update,2026-05-11 08:15:00,Phishing Scam
+MSG_0489,BZ-PROMO862,Welcome to Phonepe! Your registration code is valid for 10 minutes.,2026-05-10 02:47:00,None
+MSG_0490,BZ-ALERT753,URGENT: Your Fyers account is SUSPENDED. Re-verify your PIN details here: http://secure-fyers-portal.xyz/update,2026-05-29 06:43:00,Phishing Scam
+MSG_0491,BZ-TRANS295,Thank you for using Icicidirect gateway. Rate your transaction experience.,2026-05-12 03:55:00,None
+MSG_0492,BZ-ALERT611,URGENT: Your Zerodha account is BLOCKED. Re-verify your OTP details here: http://secure-zerodha-portal.xyz/update,2026-05-27 04:27:00,Phishing Scam
+MSG_0493,BZ-PROMO349,Thank you for using Bhim gateway. Rate your transaction experience.,2026-05-27 05:56:00,None
+MSG_0494,BZ-TRANS920,URGENT: Your Phonepe account is DEACTIVATED. Re-verify your ACCESS details here: http://secure-phonepe-portal.xyz/update,2026-05-16 08:13:00,Phishing Scam
+MSG_0495,BZ-BANK876,Welcome to Groww! Your registration code is valid for 10 minutes.,2026-05-01 11:47:00,None
+MSG_0496,BZ-PROMO602,URGENT: Your Googlepay account is BLOCKED. Re-verify your OTP details here: http://secure-googlepay-portal.xyz/update,2026-05-12 12:43:00,Phishing Scam
+MSG_0497,BZ-TRANS504,"Dear customer, your monthly e-statement for your Bhim portfolio is ready.",2026-05-04 01:08:00,None
+MSG_0498,BZ-PROMO896,URGENT: Your Googlepay account is SUSPENDED. Re-verify your PIN details here: http://secure-googlepay-portal.xyz/update,2026-05-14 17:13:00,Phishing Scam
+MSG_0499,BZ-PROMO286,Welcome to Bhim! Your registration code is valid for 10 minutes.,2026-05-30 02:10:00,None
+MSG_0500,BZ-ALERT207,URGENT: Your Googlepay account is SUSPENDED. Re-verify your KYC details here: http://secure-googlepay-portal.xyz/update,2026-05-28 19:31:00,Phishing Scam
+MSG_0501,BZ-ALERT427,Your transaction of Rs. 4938 at Paytm Digital was successful.,2026-05-24 20:37:00,None

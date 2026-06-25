@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafePay Premium Dashboard</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-container">
+    <header class="app-header">
+      <div class="header-top">
+        <div class="header-brand">
+          <div class="brand-icon">🛡️</div>
+          <div class="brand-text">
+            <h1>SafePay</h1>
+            <div class="version">v2.0.0 Enterprise</div>
+          </div>
+        </div>
+        <div class="connection-status" id="connection-indicator">
+          <div class="status-dot loading" id="status-dot"></div>
+          <span id="status-text">Connecting...</span>
+        </div>
+      </div>
+      
+      <div class="user-bar hidden" id="user-bar">
+        <div class="user-info">
+          <div class="user-avatar" id="user-avatar">?</div>
+          <div>
+            <div class="user-name" id="user-name">User</div>
+            <div class="user-email" id="user-email">Loading...</div>
+          </div>
+        </div>
+        <button class="logout-btn" id="logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="nav-tabs hidden" id="main-nav">
+      <button class="nav-tab active" data-target="tab-scanner">
+        <span class="tab-icon">🔍</span> Scanner
+      </button>
+      <button class="nav-tab" data-target="tab-history">
+        <span class="tab-icon">📋</span> History
+      </button>
+      <button class="nav-tab" data-target="tab-feed">
+        <span class="tab-icon">🚨</span> Feed
+      </button>
+      <button class="nav-tab" data-target="tab-dashboard">
+        <span class="tab-icon">📈</span> Dashboard
+      </button>
+      <button class="nav-tab" data-target="tab-settings">
+        <span class="tab-icon">⚙️</span> Settings
+      </button>
+    </nav>
+
+    <!-- Auth Container -->
+    <div id="auth-container" class="auth-container">
+      <div class="auth-card">
+        <h2 class="auth-title">Welcome to SafePay</h2>
+        <p class="auth-subtitle">AI-powered fraud intelligence</p>
+        
+        <div id="login-form">
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="text" id="login-phone" class="form-input" placeholder="Enter registered phone" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="password" id="login-password" class="form-input" placeholder="••••••••" />
+          </div>
+          <button class="btn btn-primary mt-3" id="login-btn">
+            <span class="btn-text">Secure Login</span>
+          </button>
+          
+          <div class="auth-divider">OR</div>
+          
+          <div class="auth-toggle">
+            New to SafePay? <button class="auth-toggle-link" id="show-register">Create an account</button>
+          </div>
+        </div>
+
+        <div id="register-form" class="hidden">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="reg-name" class="form-input" placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" id="reg-email" class="form-input" placeholder="john@example.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="text" id="reg-phone" class="form-input" placeholder="10-digit number" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="password" id="reg-password" class="form-input" placeholder="Secure password" />
+            <div class="password-meter" id="password-meter"><span></span></div>
+          </div>
+          <button class="btn btn-primary mt-2" id="register-btn">
+            <span class="btn-text">Register Account</span>
+          </button>
+          
+          <div class="auth-toggle">
+            Already have an account? <button class="auth-toggle-link" id="show-login">Login here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="main-content" class="hidden">
+      
+      <!-- Tab 1: Scanner -->
+      <div id="tab-scanner" class="tab-content active">
+        <div class="scanner-tabs">
+          <div class="scanner-tab active" data-target="panel-sms">
+            <span class="st-icon">💬</span> SMS/Text
+          </div>
+          <div class="scanner-tab" data-target="panel-upi">
+            <span class="st-icon">💸</span> UPI ID
+          </div>
+          <div class="scanner-tab" data-target="panel-qr">
+            <span class="st-icon">📷</span> QR Upload
+          </div>
+          <div class="scanner-tab" data-target="panel-snapshot">
+            <span class="st-icon">📸</span> Snapshot
+          </div>
+          <div class="scanner-tab" data-target="panel-live">
+            <span class="st-icon">📹</span> Live Scan
+          </div>
+        </div>
+
+        <!-- Scanner Status Summary -->
+        <div class="glass-card compact-card">
+          <div class="scanner-summary">
+            <div>
+              <div class="eyebrow">Real-Time Scanner</div>
+              <div class="summary-title">SafePay Protection</div>
+            </div>
+            <div class="scan-status-pill" id="scan-status-pill">Ready</div>
+          </div>
+        </div>
+
+        <!-- SMS Panel -->
+        <div id="panel-sms" class="scanner-panel active">
+          <div class="glass-card">
+            <div class="form-group">
+              <label class="form-label">Message Content</label>
+              <textarea id="scan-sms-text" class="form-textarea" placeholder="Paste the SMS or message here to check for phishing, OTP scams, or malicious links..."></textarea>
+              <div class="field-meta"><span id="sms-char-count">0 chars</span></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sender ID (Optional)</label>
+              <input type="text" id="scan-sms-sender" class="form-input" placeholder="e.g. VM-SBIINB, AD-HDFCBK" />
+            </div>
+            <button class="btn btn-primary mt-2" id="btn-scan-sms">
+              <span class="btn-icon">🛡️</span> <span class="btn-text">Analyze Message</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- UPI Panel -->
+        <div id="panel-upi" class="scanner-panel">
+          <div class="glass-card">
+            <div class="form-group">
+              <label class="form-label">UPI ID / VPA</label>
+              <input type="text" id="scan-upi-id" class="form-input" placeholder="e.g. merchant@oksbi, user@ybl" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Amount (₹)</label>
+                <input type="number" id="scan-upi-amount" class="form-input" placeholder="0.00" step="0.01" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Merchant (Optional)</label>
+                <input type="text" id="scan-upi-merchant" class="form-input" placeholder="Name" />
+              </div>
+            </div>
+            <button class="btn btn-primary mt-2" id="btn-scan-upi">
+              <span class="btn-icon">🔍</span> <span class="btn-text">Verify UPI ID</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- QR Panel -->
+        <div id="panel-qr" class="scanner-panel">
+          <div class="glass-card">
+            <div class="form-group">
+              <label class="form-label">Upload QR Code Image</label>
+              <div class="dropzone" id="qr-dropzone">
+                <span class="dropzone-icon">📥</span>
+                <div class="dropzone-text">Click or drag & drop QR image</div>
+                <div class="dropzone-hint">Supports PNG, JPG, JPEG</div>
+                <div class="dropzone-preview" id="qr-preview-container">
+                  <img id="qr-preview" src="" alt="QR Preview" />
+                </div>
+              </div>
+              <div class="field-meta"><span id="qr-file-meta">No file selected</span></div>
+              <input type="file" id="qr-file-input" class="hidden" accept="image/png, image/jpeg, image/jpg" />
+            </div>
+            <button class="btn btn-primary mt-2" id="btn-scan-qr" disabled>
+              <span class="btn-icon">📷</span> <span class="btn-text">Analyze QR Code</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Snapshot Panel -->
+        <div id="panel-snapshot" class="scanner-panel">
+          <div class="glass-card">
+            <div class="form-group">
+              <label class="form-label">Captured Snapshot</label>
+              <div class="snapshot-preview" id="snapshot-preview-container">
+                <img id="snapshot-preview" src="" alt="Snapshot Preview" />
+                <div class="snapshot-placeholder" id="snapshot-placeholder">No snapshot captured yet.</div>
+              </div>
+            </div>
+            <button class="btn btn-primary mt-2" id="btn-capture-snapshot">
+              <span class="btn-icon">📸</span> <span class="btn-text">Capture Snapshot</span>
+            </button>
+            <button class="btn btn-secondary mt-2" id="btn-analyze-snapshot" disabled>
+              <span class="btn-icon">🛡️</span> <span class="btn-text">Detect QR & Links</span>
+            </button>
+            <div class="snapshot-result" id="snapshot-result"></div>
+          </div>
+        </div>
+
+        <!-- Live Camera Scanner Panel -->
+        <div id="panel-live" class="scanner-panel">
+          <div class="glass-card">
+            <div class="form-group">
+              <label class="form-label">Live QR Scanner</label>
+              <div class="live-scanner-container" id="live-scanner-container">
+                <video id="live-video" autoplay playsinline muted></video>
+                <canvas id="live-canvas" class="hidden"></canvas>
+                <div class="scanner-overlay" id="scanner-overlay">
+                  <div class="scanner-crosshair"></div>
+                </div>
+                <div class="scanner-placeholder" id="live-placeholder">
+                  <span class="scanner-placeholder-icon">📹</span>
+                  <div>Tap Start to open camera</div>
+                </div>
+              </div>
+            </div>
+            <div class="live-scanner-controls">
+              <button class="btn btn-primary" id="btn-start-live">
+                <span class="btn-icon">▶️</span> <span class="btn-text">Start Scanner</span>
+              </button>
+              <button class="btn btn-danger hidden" id="btn-stop-live">
+                <span class="btn-icon">⏹️</span> <span class="btn-text">Stop Scanner</span>
+              </button>
+            </div>
+            <div class="live-status" id="live-status">Camera idle</div>
+            <div class="live-result" id="live-result"></div>
+          </div>
+        </div>
+
+        <!-- Shared Result Container -->
+        <div id="result-container" class="result-container glass-card">
+          <div class="card-title"><span class="ct-icon">📊</span> Analysis Result</div>
+          
+          <div class="risk-gauge-container">
+            <div class="risk-gauge risk-safe" id="res-gauge">
+              <svg viewBox="0 0 100 100">
+                <circle class="gauge-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="gauge-fill" id="res-gauge-fill" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+              </svg>
+              <div class="gauge-value">
+                <div class="gauge-score" id="res-score">--</div>
+                <div class="gauge-label">Score</div>
+              </div>
+            </div>
+            
+            <div class="risk-details">
+              <div class="risk-status-badge safe" id="res-badge">SAFE</div>
+              <div class="risk-meta">
+                <div class="risk-meta-item">
+                  <span class="meta-label">Risk Level:</span>
+                  <strong id="res-level">LOW</strong>
+                </div>
+                <div class="risk-meta-item hidden" id="res-ml-row">
+                  <span class="meta-label">ML Prob:</span>
+                  <span id="res-ml">0%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Dynamic Result Details -->
+          <div id="res-dynamic-details"></div>
+          
+          <div class="exec-time" id="res-time-container">
+            ⏱️ Analyzed in <span id="res-time">--</span>ms
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: History -->
+      <div id="tab-history" class="tab-content">
+        <div class="history-filters">
+          <div class="filter-chip active" data-type="ALL">All</div>
+          <div class="filter-chip" data-type="QR">QR/UPI</div>
+          <div class="filter-chip" data-type="TEXT">SMS/Text</div>
+        </div>
+        <div class="history-list" id="history-list">
+          <div class="empty-state skeleton" style="height: 200px; width: 100%;"></div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Live Threat Feed -->
+      <div id="tab-feed" class="tab-content">
+        <!-- Feed Header Card -->
+        <div class="glass-card compact-card feed-header-card">
+          <div class="feed-header-row">
+            <div class="feed-header-left">
+              <div class="feed-shield-icon" id="feed-shield-icon">🛡️</div>
+              <div>
+                <div class="feed-title">Threat Intelligence</div>
+                <div class="feed-subtitle" id="feed-subtitle">Monitoring active page &amp; network</div>
+              </div>
+            </div>
+            <div class="feed-live-indicator" id="feed-status">
+              <span class="feed-live-dot"></span>
+              <span class="feed-live-text">LIVE</span>
+            </div>
+          </div>
+          <!-- Mini Stats Row -->
+          <div class="feed-stats-row" id="feed-stats-row">
+            <div class="feed-stat">
+              <span class="feed-stat-value" id="feed-stat-active">0</span>
+              <span class="feed-stat-label">Active Threats</span>
+            </div>
+            <div class="feed-stat">
+              <span class="feed-stat-value" id="feed-stat-global">0</span>
+              <span class="feed-stat-label">Network Alerts</span>
+            </div>
+            <div class="feed-stat">
+              <span class="feed-stat-value" id="feed-stat-blocked">0</span>
+              <span class="feed-stat-label">Blocked</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Page Threats Section -->
+        <div class="glass-card feed-section-card">
+          <div class="feed-section-header">
+            <div class="feed-section-title">
+              <span class="feed-section-icon">🔍</span>
+              Active Page Scan
+            </div>
+            <button class="feed-refresh-btn" id="feed-refresh-btn" title="Rescan active tab">↻</button>
+          </div>
+          <div class="feed-section-body" id="active-tab-threats-list">
+            <div class="feed-empty-state">
+              <div class="feed-empty-icon">✅</div>
+              <div class="feed-empty-title">No threats detected</div>
+              <div class="feed-empty-hint">This page appears safe. Navigate to a suspicious page to start scanning.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Threat Stream Section -->
+        <div class="glass-card feed-section-card">
+          <div class="feed-section-header">
+            <div class="feed-section-title">
+              <span class="feed-section-icon">🌐</span>
+              Global Threat Stream
+            </div>
+            <div class="feed-filter-group">
+              <button class="feed-filter-chip active" data-feed-filter="all">All</button>
+              <button class="feed-filter-chip" data-feed-filter="high">High</button>
+              <button class="feed-filter-chip" data-feed-filter="medium">Med</button>
+            </div>
+          </div>
+          <div class="feed-section-body feed-scrollable" id="threat-feed-list">
+            <div class="feed-empty-state">
+              <div class="feed-empty-icon">📡</div>
+              <div class="feed-empty-title">Listening for threats</div>
+              <div class="feed-empty-hint">Real-time alerts from the SafePay network will appear here.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Dashboard -->
+      <div id="tab-dashboard" class="tab-content">
+        <div class="dashboard-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-total">--</div>
+            <div class="stat-label">Total Scans</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-threats">--</div>
+            <div class="stat-label">Threats Blocked</div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><span class="ct-icon">🌐</span> System Status</div>
+          <div class="health-status">
+            <div class="health-row">
+              <div class="health-label"><span class="hl-icon">⚡</span> API Server</div>
+              <div class="health-value loading" id="health-api">Checking...</div>
+            </div>
+            <div class="health-row">
+              <div class="health-label"><span class="hl-icon">🗄️</span> Database</div>
+              <div class="health-value loading" id="health-db">Checking...</div>
+            </div>
+            <div class="health-row">
+              <div class="health-label"><span class="hl-icon">🧠</span> ML Models</div>
+              <div class="health-value loading" id="health-ml">Checking...</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-title"><span class="ct-icon">📈</span> Threat Distribution</div>
+          <div class="threat-dist">
+            <div class="dist-bar-container">
+              <div class="dist-bar-segment safe" id="dist-safe" style="width: 33%"></div>
+              <div class="dist-bar-segment suspicious" id="dist-suspicious" style="width: 33%"></div>
+              <div class="dist-bar-segment fraud" id="dist-fraud" style="width: 34%"></div>
+            </div>
+            <div class="dist-legend">
+              <div class="legend-item"><div class="legend-dot safe"></div> <span id="dist-safe-pct">0%</span></div>
+              <div class="legend-item"><div class="legend-dot suspicious"></div> <span id="dist-suspicious-pct">0%</span></div>
+              <div class="legend-item"><div class="legend-dot fraud"></div> <span id="dist-fraud-pct">0%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tab 5: Settings -->
+      <div id="tab-settings" class="tab-content">
+        <div class="glass-card">
+          <div class="card-title"><span class="ct-icon">⚙️</span> Real-Time Settings</div>
+          
+          <div class="setting-item mt-3">
+            <div class="setting-row">
+              <div class="setting-info">
+                <div class="setting-name">Continuous QR Monitoring</div>
+                <div class="setting-desc">Scan the active browser tab for QR codes automatically in real-time.</div>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="setting-continuous-scan" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="setting-item" id="scan-interval-container">
+            <div class="setting-row-vertical">
+              <div class="setting-info">
+                <div class="setting-name-val">
+                  <span>Scan Interval</span>
+                  <span id="setting-interval-val" class="highlight-val">2.0s</span>
+                </div>
+                <div class="setting-desc">Time between consecutive screen scans.</div>
+              </div>
+              <input type="range" id="setting-scan-interval" min="1.0" max="5.0" step="0.5" value="2.0" class="range-slider" />
+              <div class="range-labels">
+                <span>1.0s (Fast)</span>
+                <span>3.0s</span>
+                <span>5.0s (Power Save)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="jsQR.min.js"></script>
+  <script src="api.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
